@@ -1,5 +1,5 @@
-<h1>Create a new game</h1>
-<p>If you couldn't find it in our awesome database :)</p>
+<h1>Créer un nouveau jeu</h1>
+
 
 <%= simple_form_for @game do |f| %>
 <%= f.input :name, label: "Nom" %>
@@ -8,7 +8,7 @@
 <%= f.input :picture, label: "Url image" %>
 <%= f.input :description %>
 <%= f.input :category, label: "Catégorie", collection: %w(Stratégie Ambiance Junior) %>
-<%= f.button :submit %>
+<%= f.button :submit, name: "Créer" %>
 
 <% end %>
 
