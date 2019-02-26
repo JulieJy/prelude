@@ -4,5 +4,5 @@ class Game < ApplicationRecord
 
   validates :name, :nb_player, :duration, :rules, :description, :category, presence: true
 
-  mount_uploader :picture, PhotoUploader
+  # mount_uploader :picture, PhotoUploader
 end
