@@ -1,2 +1,10 @@
 <h1>Event#new</h1>
 <p>Find me in app/views/event/new.html.erb</p>
+
+<%= simple_form_for @event do |f| %>
+  <%= f.input :date %>
+  <%= f.input :time %>
+  <%= f.input :place %>
+  <%= f.input :nb_person %>
+  <%= f.submit "create" %>
+<% end %>
