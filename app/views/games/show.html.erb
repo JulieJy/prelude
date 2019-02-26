@@ -1,2 +1,6 @@
-<h1>Game#show</h1>
-<p>Find me in app/views/game/show.html.erb</p>
+<h1><%= @game.name %></h1>
+<img src="<%= @game.picture %>" alt="<%= @game.name %>">
+<p>De <%= @game.nb_player_min %> à <%= @game.nb_player_max %> joueurs</p>
+<p><%= @game.duration %> minutes</p>
+<p><%= @game.category %></p>
+<p><%= @game.description %></p>
