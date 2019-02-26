@@ -17,9 +17,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: :show
-  resources :games, only: [:new, :create]
-  resources :event, only: [:new, :create, :show]
-  resources :participants, only: [:index, :new, :create, :destroy]
+  resources :events, only: [:new, :create, :show] do
+    resources :participants, only: [:create]
+  end
+  resources :participants, only: [:destroy]
+
+  resources :games, only: [:show]
   resources :libraries, only: [:index, :create, :destroy]
 
   root to: 'pages#home'
