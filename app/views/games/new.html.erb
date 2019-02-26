@@ -1,13 +1,15 @@
-<h1>Create a new game</h1>
+<h1>Créer un nouveau jeu</h1>
 <p>If you couldn't find it in our awesome database :)</p>
 
-<%= simple_form_for games_new_path do |f| %>
+
+<%= simple_form_for @game do |f| %>
 <%= f.input :name, label: "Nom" %>
 <%= f.input :nb_player_min, label: "Nombre de joueurs de" %> <%= f.input :nb_player_max, label: "à" %>
 <%= f.input :duration, label: "Durée moyenne (minutes)" %>
 <%= f.input :picture, label: "Url image" %>
 <%= f.input :description %>
 <%= f.input :category, label: "Catégorie", collection: %w(Stratégie Ambiance Junior) %>
+<<<<<<< HEAD
 <%= f.button :submit, name: "Créer" %>
 
 <% end %>
