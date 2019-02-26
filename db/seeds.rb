@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
 p 'destroying all games'
 Game.destroy_all
 
@@ -23,3 +24,24 @@ Les cartes appartiennent à 6 grandes familles qui vont permettre aux joueurs de
   picture: "https://www.espritjeu.com/upload/image/7-wonders-p-image-65500-grande.jpg",
   category: "Stratégie"
   )
+
+p 'I destroy all users'
+User.destroy_all
+
+p 'I create 2 users'
+user1 = User.create!(
+  first_name: "Pedro",
+  last_name: "Matanzo",
+  email: "pedro@pedro.com",
+  address: "Madrid",
+  phone_number:"555-345-322",
+  password: "secret")
+
+
+user2 = User.create!(
+  first_name: "Julie",
+  last_name: "Jaumary",
+  email: "julie@julie.com",
+  address: "20 rue des capucins, Lyon",
+  phone_number:"555-345-322",
+  password: "secret")
