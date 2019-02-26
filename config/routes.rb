@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: :show
-  resources :games, only: [:new, :create]
+  resources :games, only: [:new, :create, :show]
   resources :event, only: [:new, :create, :show]
   resources :participants, only: [:index, :new, :create, :destroy]
   resources :libraries, only: [:index, :create, :destroy]
