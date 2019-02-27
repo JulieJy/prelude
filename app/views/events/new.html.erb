@@ -8,7 +8,7 @@
   <%= f.input :time %>
   <%= f.input :place, label: 'bar? ou chez toi?', as: :radio_buttons, collection: ["Chez moi", "Bar"] %>
   <div class="dropdown_address">
-   <%= f.input :place, collection: ["#{@bars[0].name}: #{@bars[0].address}", "#{@bars[1].name}: #{@bars[1].address}", "#{@bars[2].name}: #{@bars[2].address}"] %>
+   <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]} %>
   </div>
 
 

@@ -7,4 +7,19 @@ class Event < ApplicationRecord
   has_one :creator, through: :creator_participant, source: :user
   validates :date, :time, :place, :nb_person, presence: true
   belongs_to :bar, optional: true
+
+  def coordinates
+    if bar
+      {
+        latitude: bar.latitude,
+        longitude: bar.longitude
+      }
+    else
+      {
+        latitude: creator.latitude,
+        longitude: creator.longitude
+      }
+    end
+  end
+
 end
