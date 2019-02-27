@@ -22,4 +22,17 @@ class Event < ApplicationRecord
     end
   end
 
+  attr_accessor :invitation_emails
+
+  after_create :send_invitations
+
+  private
+
+  def send_invitations
+    return unless invitation_emails
+
+    invitation_emails.each do |email|
+      puts "j'invite #{email}"
+    end
+  end
 end

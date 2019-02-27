@@ -10,7 +10,11 @@
   <div class="dropdown_address">
    <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]} %>
   </div>
+ 
+  <%= f.input :invitation_emails, collection: User.pluck(:email) %>
 
+
+  <%= f.input :nb_person %>
 
   <%= f.input :nb_person %>
   <%= f.submit "create" %>
