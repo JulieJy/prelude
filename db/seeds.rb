@@ -11,7 +11,8 @@ p 'I destroy all games'
 Game.destroy_all
 p 'I destroy all users'
 User.destroy_all
-
+p 'I destroy all bars'
+Bar.destroy_all
 
 
 p 'I create 2 users'
@@ -97,3 +98,20 @@ game4 = Game.create!(
   )
 p '4 games created'
 
+
+bar1 = Bar.create!(
+  name: "Suberry",
+  address: "17 Rue d'Inkermann, 69100 Villeurbanne ",
+
+  )
+bar2 = Bar.create!(
+  name: "Barnadé",
+  address: " 49 Rue de l’Abondance, 69003 Lyon",
+  )
+
+bar3 = Bar.create!(
+  name: "Les Arpenteurs",
+  address: "13 Rue Lanterne, 69001 Lyon",
+  )
+
+p '3 bars created'

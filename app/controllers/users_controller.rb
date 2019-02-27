@@ -12,8 +12,4 @@ class UsersController < ApplicationController
         lat: user.latitude
       }
     end
-
-
-
-
 end
