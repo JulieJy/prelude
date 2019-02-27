@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   end
   resources :participants, only: [:destroy]
   get 'games/search', to: 'games#search'
-  post 'games/search/search_games', to: 'games#search_games'
-  get 'games/search/suggestions', to: 'games#suggestions'
+  # get 'games/search/search_games', to: 'games#search_games'
+  get 'games/suggestions', to: 'games#suggestions'
   resources :games, only: [:show]
   resources :libraries, only: [:index, :create, :destroy]
 

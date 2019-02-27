@@ -1,6 +1,6 @@
 <h1>Trouver un jeu</h1>
 
-<form action="/games/search/search_games" method="POST">
+<form action="/games/suggestions" method="GET">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="nb_player">Vous êtes combien ?</label>
   <input type="number" name= "nb_player" id= "nb_player">
