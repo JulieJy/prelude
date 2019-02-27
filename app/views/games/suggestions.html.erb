@@ -1,0 +1,10 @@
+<h1>Suggestions</h1>
+
+
+<% if @games.nil? %>
+  <p>Désolé, aucun jeu ne correspond à tes critères :( </p>
+  <% else %>
+    <% @games.each do |game| %>
+      <li> <%= game.name %> </li>
+    <% end %>
+<% end %>
