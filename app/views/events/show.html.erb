@@ -1,2 +1,10 @@
 <h1>Event#show</h1>
 <p>Find me in app/views/event/show.html.erb</p>
+
+<h2><%= @event.creator.first_name %></h2>
+<h2><%= @event.creator.last_name %></h2>
+
+<%= @event.date %>
+<%= @event.time %>
+<%= @event.place %>
+<%= @event.nb_person %>
