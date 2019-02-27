@@ -2,6 +2,14 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+
+    creator = @event.creator
+
+    @markers = [      {
+      lng: creator.longitude,
+      lat: creator.latitude,
+      image_url: helpers.asset_url('https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/location-24-512.png')
+    }]
   end
 
   def new
