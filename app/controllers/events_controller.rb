@@ -5,15 +5,37 @@ class EventsController < ApplicationController
 
     creator = @event.creator
 
-    @markers = [      {
+    @markers = [{
       lng: creator.longitude,
       lat: creator.latitude,
       image_url: helpers.asset_url('https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/location-24-512.png')
     }]
   end
 
+  # def coordinates
+  #  if bar = nil
+
+
+  #     lng: bar.longitude,
+  #     lat: bar.latitude,
+  #     image_url: helpers.asset_url('https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/location-24-512.png')
+  #   }]
+
+  #  else
+  #     [{
+  #     lng: creator.longitude,
+  #     lat: creator.latitude,
+  #     image_url: helpers.asset_url('https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/location-24-512.png')
+  #   }]
+
+  #  end
+
+  # end
+
   def new
     @event = Event.new
+    @bars = Bar.all
+
   end
 
   def create
