@@ -1,0 +1,13 @@
+<h1>Trouver un jeu</h1>
+
+<h1>Créer un nouveau jeu</h1>
+
+
+<%= simple_form_for @game do |f| %>
+<%= f.input :nb_player, label: "Vous êtes combien ?" %>
+<%= f.input :duration, label: "Combien de temps avez-vous ?" %>
+<%= f.input :category, label: "Catégorie", collection: %w(Stratégie Ambiance Junior) %>
+<%= f.button :submit, name: "Trouver" %>
+
+<% end %>
+

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   resources :participants, only: [:destroy]
   resources :games, only: [:show]
+  get 'games/search', to: 'games#search'
   resources :libraries, only: [:index, :create, :destroy]
 
   root to: 'pages#home'
