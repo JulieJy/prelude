@@ -5,8 +5,9 @@
   <%= f.input :date %>
   <%= f.input :time %>
   <%= f.input :place, collection: ["Chez moi: #{current_user.address}", "Shrubbery: 17 Rue d’Inkermann, 69100 Villeurbanne", "Barnadé : 49 Rue de l’Abondance, 69003 Lyon", "Les Arpenteurs : 13 Rue Lanterne, 69001 Lyon", "Moi j’m’en fous je triche : 8 Rue René Leynaud, 69001 Lyon", "L’Atenium : 80 Rue Montesquieu, 69007 Lyon"] %>
-  <%= f.input :nb_person %>
+  <%= f.input :invitation_emails, collection: User.pluck(:email) %>
 
+  <%= f.input :nb_person %>
 
   <%= f.submit "create" %>
 <% end %>
