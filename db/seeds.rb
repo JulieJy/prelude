@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require_relative '../app/services/scrapping.rb'
+
 Participant.destroy_all
 p 'I destroy all games'
 Game.destroy_all
@@ -114,3 +116,7 @@ bar3 = Bar.create!(
   )
 
 p '3 bars created'
+
+p 'scrapping'
+games = Scrapper.fetch_strategy_urls
+games.each {|url| Scrapper.scrape_game(url)}
