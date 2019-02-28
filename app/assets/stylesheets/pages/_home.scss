@@ -1,1 +1,96 @@
 // Specific CSS for your home-page
+.home_body {
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.prelude_logo_login {
+  height: 176px;
+  width: 200px;
+  position: absolute;
+  top: 10%;
+}
+
+.prelude_logo_logout {
+  height: 176px;
+  width: 200px;
+  position: absolute;
+  top: 25%;
+}
+
+#inscription_btn {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  width: 60%;
+  padding: 10px 15px;
+
+  position: absolute;
+  bottom: 20%;
+
+  font-family: Open Sans;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 14px;
+
+  color: #252A31;
+}
+
+#sign_in {
+  position: absolute;
+  bottom: 15%;
+  font-family: Open Sans;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: normal;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
+
+.link_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  // bottom: 0%;
+  height: 74%;
+  border-radius: 50px 50px 0px 0px;
+  align-items: center;
+  // padding-top: 15%;
+}
+
+.button {
+  box-shadow: 0px 4px 20px rgba(21, 35, 56, 0.25);
+  border-radius: 10px;
+  width: 80%;
+  font-family: Open Sans;
+  color: white;
+  text-decoration: none;
+  margin: 20px 0;
+  padding: 20px 15px;
+}
+
+#create_event_btn {
+  background: #F05D59;
+}
+
+#select_game_btn {
+  background: #F6A362;
+}
+
+#my_profile_btn {
+  background: #FAD878;
+}

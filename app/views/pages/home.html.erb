@@ -1,4 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home_body">
 
-<%= link_to "create an event", new_event_path, class: "btn btn-primary" %>
+<% if user_signed_in? %>
+  <%= image_tag "prelude_negatif.png", alt: "prelude logo", class:"prelude_logo_login" %>
+  <div class="link_box">
+    <%= link_to "Créer une soirée jeux", new_event_path, id: "create_event_btn", class: "button" %>
+    <%= link_to "Choisir son jeu", games_search_path, id: "select_game_btn", class: "button" %>
+    <%= link_to "Mon profil", user_path(current_user), id: "my_profile_btn", class: "button" %>
+  </div>
+<% else %>
+  <%= image_tag "prelude_negatif.png", alt: "prelude logo", class:"prelude_logo_logout" %>
+  <%= link_to t(".sign_up", default: "Inscription"), new_user_registration_path, id:"inscription_btn" %>
+  <%= link_to t(".sign_in", default: "Déjà membre? Je me connecte"), new_user_session_path, id:"sign_in" %>
+<% end %>
+</div>
