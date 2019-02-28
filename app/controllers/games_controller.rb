@@ -24,7 +24,7 @@ class GamesController < ApplicationController
 
   # search for a game with filters
   def suggestions
-    @games = filters(params[:nb_player].to_i, params[:duration].to_i, params[:category].capitalize)
+    @games = filters(params[:nb_player].to_i, params[:duration], params[:category].capitalize)
     if @games.nil?
       return
     elsif @games.size > 3
