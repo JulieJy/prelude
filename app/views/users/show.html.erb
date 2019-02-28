@@ -6,3 +6,13 @@
 <%= @user.address %>
 <%= @user.email %>
 <%= @user.phone_number %>
+
+<h3>My Games</h3>
+<% @user.games.each do |game| %>
+  <p><%= game.name %></p>
+<% end %>
+
+<%= simple_form_for @library do |f| %>
+  <%= f.input :game_id, collection: Game.order(:name) %>
+  <%= f.submit "add a game", class: "btn btn-primary" %>
+<% end %>
