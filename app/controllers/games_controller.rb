@@ -23,50 +23,21 @@ class GamesController < ApplicationController
   end
 
   # search for a game with filters
-  def search_games
-    # Start : all games
-    @games = Game.all
-    # Step 1 : filter by nb of players
-    # games1 = games.filter_nb_players(params[:nb_player].to_i)
-
-    @games_search_result = retrieve_data_between_two_values(params[:nb_player].to_i)
-
-    # @games = Game.where(params[:nb_player].to_i BETWEEN nb_player_min AND nb_player_max)
-    # raise
-    # Step 2 : filter by duration
-    # games2 = games1.filter_duration(params[:duration].to_i)
-    # Step 3 (final): filter by style
-    # @games_search_result = games2.filter_style(params[:category])
-    redirect_to games_search_suggestions_path(@games_search_result)
-  end
-
-  # display 3 suggestions (random)
   def suggestions
-    @games = Game.all
-    @games_search_result = retrieve_data_between_two_values(params[:nb_player].to_i)
-    if @games_search_result.nil?
+    @games = filters(params[:nb_player].to_i, params[:duration].to_i, params[:category].capitalize)
+    if @games.nil?
       return
+    elsif @games.size > 3
+      @games = @games.sample(3)
     else
-      @games = @games_search_result.sample(3)
+      @games = @games
     end
   end
 
   private
 
-  def filter_nb_players(nb)
-    Game.where(nb BETWEEN nb_player_min AND nb_player_max)
-  end
-
-  def retrieve_data_between_two_values(user_params)
-    Game.where("nb_player_min <= ? AND nb_player_max >= ?", user_params, user_params)
-  end
-
-  def filter_duration(drtion)
-    Game.where(drtion == duration)
-  end
-
-  def filter_style(style)
-    Game.where(style == category)
+  def filters(user_players, user_duration, user_category)
+    Game.where("nb_player_min <= ? AND nb_player_max >= ?", user_players, user_players).where("duration = ?", user_duration).where("category = ?", user_category)
   end
 
   def find_game
