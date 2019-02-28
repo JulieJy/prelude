@@ -3,6 +3,7 @@ class EventsController < ApplicationController
   def show
 
     @event = Event.find(params[:id])
+    @participant = current_user.participants.last
 
     @markers = [{
       lng: @event.coordinates[:longitude],
@@ -19,11 +20,12 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    # @user = User.find(params[:user_id])
+    @user = User.find_by(params[:email])
     # @user.role = organizer
-
     if @event.save
+
       Participant.create!(event: @event, user: current_user, role: 'organizer')
+      Participant.create!(event: @event, user: @user, role: 'attendee')
       redirect_to event_path(@event)
     else
       @bars = Bar.all

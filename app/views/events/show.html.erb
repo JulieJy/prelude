@@ -1,22 +1,55 @@
-<h1>Event#show</h1>
-<p>Find me in app/views/event/show.html.erb</p>
+<div class="container">
+  <div class="row">
 
-<h2><%= @event.creator.first_name %></h2>
-<h2><%= @event.creator.last_name %></h2>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="text-center">
+      <h1>EVENT SHOW</h1>
+        <h4>Soirée Jeux de  <%= @event.creator.first_name %>
+         <%= @event.creator.last_name %></h4>
 
-<%= @event.date %>
-<%= @event.time %>
-<%= @event.place %>
-<%= @event.nb_person %>
-
-
-  <div class="col-xs-12 col-md-12">
-      <h1>Event in the map</h1>
+       <p>Event date is <%= @event.date %></p>
+       <p>Event time is <%= @event.time %></p>
+       <p>Event place is in <%= @event.place %></p>
+       <p>Number of participants <%= @event.nb_person %></p>
+       </div>
       <div
          id="map"
          style="width: 100%;
          height: 600px;"
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-       </div>
+      </div>
+      <div class="participants">
+    <ul>
+           <li>
+            <img src="<%=@event.creator.photo %>" alt="Avatar" class="avatar">
+          </li>
+
+
+      <% @event.nb_person.times do  %>
+          <% if @participant.status == true %>
+            <li>
+               <img src="<%=current_user.photo %>" alt="Avatar" class="avatar" id="avatar">
+            </li>
+
+          <% elsif @participant.status == false %>
+              <li>
+                 <img src="https://t3.ftcdn.net/jpg/01/04/10/10/240_F_104101070_wbEDt3CmlzqnPbdmOlVCL7Q7yu9mCduz.jpg" alt="Avatar" class="avatar">
+             </li>
+          <% else %>
+              <li>
+                 <img src="https://t3.ftcdn.net/jpg/01/04/10/10/240_F_104101070_wbEDt3CmlzqnPbdmOlVCL7Q7yu9mCduz.jpg" alt="Avatar" class="avatar">
+             </li>
+          <% end %>
+      <% end %>
+
+    </ul>
+
+       <%= link_to "accept",  event_participant_accept_path(@event, @participant), :method=> :patch, class:"btn btn-success"%>
+       <%= link_to "decline", event_participant_decline_path(@event, @participant), :method=> :patch, class:"btn btn-danger" %>
+
+      </div>
+      <button class="btn btn-primary text-center">DEMARRER LA SOIRÉE</button>
+      </div>
   </div>
+</div>

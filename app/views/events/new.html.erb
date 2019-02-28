@@ -1,6 +1,9 @@
+<div class="container">
+  <div class="row">
 
+    <div class="col-md-6 col-md-offset-3">
 
-<h1>Event#new</h1>
+<h1>NOUVELLE SOIRÉE</h1>
 <p>Find me in app/views/event/new.html.erb</p>
 
 <%= simple_form_for @event do |f| %>
@@ -10,12 +13,14 @@
   <div class="dropdown_address">
    <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]} %>
   </div>
- 
+
   <%= f.input :invitation_emails, collection: User.pluck(:email) %>
 
+  <%= f.input :nb_person, input_html: { min: '0', step: 'any' }  %>
 
-  <%= f.input :nb_person %>
-
-  <%= f.input :nb_person %>
   <%= f.submit "create" %>
 <% end %>
+
+ </div>
+  </div>
+</div>
