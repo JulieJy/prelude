@@ -18,7 +18,27 @@ class GamesController < ApplicationController
   def show
   end
 
+  # display search form
+  def search
+  end
+
+  # search for a game with filters
+  def suggestions
+    @games = filters(params[:nb_player].to_i, params[:duration].to_i, params[:category].capitalize)
+    if @games.nil?
+      return
+    elsif @games.size > 3
+      @games = @games.sample(3)
+    else
+      @games = @games
+    end
+  end
+
   private
+
+  def filters(user_players, user_duration, user_category)
+    Game.where("nb_player_min <= ? AND nb_player_max >= ?", user_players, user_players).where("duration = ?", user_duration).where("category = ?", user_category)
+  end
 
   def find_game
     @game = Game.find(params[:id])

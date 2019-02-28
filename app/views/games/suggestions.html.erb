@@ -1,0 +1,9 @@
+<h1>Suggestions</h1>
+
+<% if @games[0].nil? %>
+  <p>Désolé, aucun jeu ne correspond à tes critères :( </p>
+  <% else %>
+    <% @games.each do |hash| %>
+      <li><%= link_to hash["name"], game_path(hash["id"])%></li>
+    <% end %>
+<% end %>
