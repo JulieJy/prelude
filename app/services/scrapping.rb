@@ -7,7 +7,7 @@ class Scrapper
     strategy_url = "https://www.espritjeu.com/jeux-de-strategie.html#filtres=25"
     doc = Nokogiri::HTML(open(strategy_url).read)
     games = doc.search(".bp_designation a")
-    games.take(5).map do |game|
+    games.take(10).map do |game|
       uri = URI.parse(game.attributes["href"].value)
       uri.scheme = "http"
       uri.host = "www.espritjeu.com"
@@ -35,7 +35,7 @@ class Scrapper
       name: name,
       nb_player_min: nb_player_min,
       nb_player_max: nb_player_max.nil? ? nb_player_min : nb_player_max,
-      duration: (if duration.to_i <= 40
+      duration: (if duration.to_i <= 35
                   "fast"
                 elsif duration.to_i <= 65
                   "medium"
