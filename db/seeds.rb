@@ -117,7 +117,23 @@ bar3 = Bar.create!(
 
 p '3 bars created'
 
-p 'scrapping 5 games'
-games = Scrapper.fetch_strategy_urls
-games.each {|url| Scrapper.scrape_game(url)}
+p 'scrapping 10 strategy games'
+strategy_url = "https://www.espritjeu.com/jeux-de-strategie.html#filtres=25"
+games = Scrapper.fetch_urls(strategy_url)
+category = "Stratégie"
+games.each {|url| Scrapper.scrape_game(url, category)}
+p 'ok'
+
+p 'scrapping 10 junior games'
+junior_url = "https://www.espritjeu.com/jeux-pour-enfants.html#filtres=25"
+games = Scrapper.fetch_urls(junior_url)
+category = "Junior"
+games.each {|url| Scrapper.scrape_game(url, category)}
+p 'ok'
+
+p 'scrapping 10 apero games'
+apero_url = "https://www.espritjeu.com/jeux-d-ambiance.html#filtres=25"
+games = Scrapper.fetch_urls(apero_url)
+category = "Ambiance"
+games.each {|url| Scrapper.scrape_game(url, category)}
 p 'ok'
