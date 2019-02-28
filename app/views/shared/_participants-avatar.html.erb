@@ -1,0 +1,19 @@
+<ul>
+  <% accepted_participants = event.participants.where(status: true) %>
+  <% accepted_participants.each do |participant| %>
+    <li>
+      <img src="<%=participant.user.photo %>" alt="Avatar" class="avatar">
+    </li>
+  <% end %>
+
+  <% (event.nb_person - accepted_participants.count).times do  %>
+    <li>
+      <img src="https://t3.ftcdn.net/jpg/01/04/10/10/240_F_104101070_wbEDt3CmlzqnPbdmOlVCL7Q7yu9mCduz.jpg" alt="Avatar" class="avatar" id="avatar">
+    </li>
+  <% end %>
+</ul>
+
+<%=  %>
+
+<%= link_to "accept",  accept_participant_path(current_participant), :method=> :patch, class:"btn btn-success", remote: true %>
+<%= link_to "decline", decline_participant_path(current_participant), :method=> :patch, class:"btn btn-danger", remote: true %>

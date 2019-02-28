@@ -19,36 +19,11 @@
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
+
       <div class="participants">
-    <ul>
-           <li>
-            <img src="<%=@event.creator.photo %>" alt="Avatar" class="avatar">
-          </li>
-
-
-      <% @event.nb_person.times do  %>
-          <% if @participant.status == true %>
-            <li>
-               <img src="<%=current_user.photo %>" alt="Avatar" class="avatar" id="avatar">
-            </li>
-
-          <% elsif @participant.status == false %>
-              <li>
-                 <img src="https://t3.ftcdn.net/jpg/01/04/10/10/240_F_104101070_wbEDt3CmlzqnPbdmOlVCL7Q7yu9mCduz.jpg" alt="Avatar" class="avatar">
-             </li>
-          <% else %>
-              <li>
-                 <img src="https://t3.ftcdn.net/jpg/01/04/10/10/240_F_104101070_wbEDt3CmlzqnPbdmOlVCL7Q7yu9mCduz.jpg" alt="Avatar" class="avatar">
-             </li>
-          <% end %>
-      <% end %>
-
-    </ul>
-
-       <%= link_to "accept",  event_participant_accept_path(@event, @participant), :method=> :patch, class:"btn btn-success"%>
-       <%= link_to "decline", event_participant_decline_path(@event, @participant), :method=> :patch, class:"btn btn-danger" %>
-
+        <%= render 'shared/participants-avatar', current_participant: @participant, event: @event %>
       </div>
+
       <button class="btn btn-primary text-center">DEMARRER LA SOIRÉE</button>
       </div>
   </div>

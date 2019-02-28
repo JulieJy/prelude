@@ -4,10 +4,13 @@ Rails.application.routes.draw do
 
   resources :users, only: :show
   resources :events, only: [:new, :create, :show] do
-    resources :participants, only: [:create] do
-       patch "accept"
-       patch "decline"
-     end
+    resources :participants, only: [:create]
+  end
+  resources :participants, only: [] do
+    member do
+      patch "accept"
+      patch "decline"
+    end
   end
   resources :participants, only: [:destroy]
   resources :games, only: [:show]

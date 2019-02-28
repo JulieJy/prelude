@@ -12,15 +12,15 @@ class ParticipantsController < ApplicationController
   end
 
   def accept
-
-    @participant = current_user.participants.last
+    @participant = Participant.find(params[:id])
     @participant.update(:status => true)
-
+    @event = @participant.event
   end
 
   def decline
-    @participant = current_user.participants.last
+    @participant = Participant.find(params[:id])
     @participant.update(:status => false)
+    @event = @participant.event
   end
 end
 
