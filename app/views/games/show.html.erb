@@ -1,7 +1,30 @@
-<h1><%= @game.name %></h1>
-<img src="<%= @game.picture %>" alt="<%= @game.name %>">
-<p>De <%= @game.nb_player_min %> à <%= @game.nb_player_max %> joueurs</p>
-<p>Temps de jeu : <%= time_for(@game) %>
-</p>
-<p><%= @game.category %></p>
-<p><%= @game.description %></p>
+<div class="container bg-games">
+  <div class="row">
+      <div class="col-sx-12 col-md-4 col-md-offset-4">
+
+
+       <div class="game-box">
+
+        <div class="head-show">
+          <%= link_to image_tag 'left-arrow_white.png', class: "left-arrow" %>
+           <%= link_to "Retour a la recherche", :back , class: "retour"%>
+        </div>
+
+
+       <h1><%= @game.name%></h1>
+
+       <div class="game-img ">
+           <img src="<%= @game.picture %>" alt="<%= @game.name %>">
+       </div>
+
+        <div class="game-description">
+           <p><span>Nombre de joueurs </span>De <%= @game.nb_player_min %> à <%= @game.nb_player_max %> joueurs</p>
+           <p><span>Temps de jeu </span> <%= time_for(@game) %></p>
+           <p><span>Category </span> <%= @game.category %></p>
+           <p class= "game-text"><span>Description </span><%= @game.description%></p>
+        </div>
+
+       </div>
+     </div>
+   </div>
+</div>
