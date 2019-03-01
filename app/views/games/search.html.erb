@@ -1,5 +1,11 @@
 <div class="container cont-search">
   <div class="row">
+    <%= link_to games_search_path do %>
+      <div class="title-align">
+        <%= image_tag 'left-arrow.png', class: "left-arrow" %>
+        <h2 class="title_sign_up">Retour à la recherche</h2>
+      </div>
+      <% end %>
     <h1>Choisir son jeu</h1>
     <div class="cont-questions">
       <form action="/games/suggestions" method="GET">
