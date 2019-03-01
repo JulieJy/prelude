@@ -1,0 +1,58 @@
+
+.game-box{
+
+  background-color: #f6a362;
+  padding: 20px;
+
+  h1{
+     font-family: Open Sans;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     font-size: 30px;
+     letter-spacing: -0.458235px;
+     color: #FFFFFF;
+     text-align:center;
+  }
+
+
+}
+
+.game-img{
+  width: 80%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  img{
+   width:250px;
+   height: 250px;
+  }
+
+}
+
+.game-description{
+
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  color:#000;
+
+
+   span{
+      font-weight: bold;
+       margin-right: 5px;
+   }
+}
+
+.game-text{
+  line-height:30px;
+
+}
