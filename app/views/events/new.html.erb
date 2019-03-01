@@ -2,25 +2,27 @@
   <div class="row">
 
     <div class="col-md-6 col-md-offset-3">
+<div class="page-new">
+<h2 class="new-title">Créer une soirée jeux</h2>
+  <div class="form-group">
+      <%= simple_form_for @event do |f|%>
+      <%= f.input :date, class: "form-control" %>
+      <%= f.input :time %>
+      <%= f.input :place, label: 'bar? ou chez toi?', as: :radio_buttons, collection: ["Chez moi", "Bar"] %>
+      <div class="dropdown_address">
+      <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]} %>
+      </div>
 
-<h1>NOUVELLE SOIRÉE</h1>
-<p>Find me in app/views/event/new.html.erb</p>
+      <%= f.input :invitation_emails, collection: User.pluck(:email), class: "span8 ac-select2" %>
 
-<%= simple_form_for @event do |f| %>
-  <%= f.input :date %>
-  <%= f.input :time %>
-  <%= f.input :place, label: 'bar? ou chez toi?', as: :radio_buttons, collection: ["Chez moi", "Bar"] %>
-  <div class="dropdown_address">
-   <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]} %>
-  </div>
+      <%= f.input :nb_person, input_html: { min: '0', step: 'any' },class: "form-control"  %>
 
-  <%= f.input :invitation_emails, collection: User.pluck(:email), class: "span8 ac-select2" %>
 
-  <%= f.input :nb_person, input_html: { min: '0', step: 'any' }  %>
 
-  <%= f.submit "create" %>
-<% end %>
-
+      <%= f.submit "create" %>
+   <% end %>
+   </div>
+</div>
  </div>
   </div>
 </div>
