@@ -1,8 +1,10 @@
 
-.game-box{
-
+.bg-games{
   background-color: #f6a362;
-  padding: 20px;
+
+}
+
+.game-box{
 
   h1{
      font-family: Open Sans;
@@ -19,7 +21,7 @@
 }
 
 .game-img{
-  width: 80%;
+  width: 100%;
   background-color: #fff;
   padding: 30px;
   border-radius: 30px;
@@ -54,5 +56,45 @@
 
 .game-text{
   line-height:30px;
+
+}
+
+.title-align {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+}
+
+.left-arrow {
+  width: 10%;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.img_signin{
+  width: 10%;
+}
+
+.retour{
+    font-family: Open Sans;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     font-size: 20px;
+     letter-spacing: -0.458235px;
+     color: #FFFFFF;
+     text-align:center;
+   position: relative;
+   top:7px;
+
+}
+
+.retour:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.head-show{
+  margin-top:25px;
 
 }

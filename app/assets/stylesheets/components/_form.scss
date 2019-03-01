@@ -68,10 +68,17 @@
 
   }
 
-
 }
 
-
+.title_sign_up{
+font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+line-height: 41px;
+font-size: 18px;
+letter-spacing: 0.01em;
+color: #FFFFFF;
+}
 
 .title_sign_up {
 font-family: Open Sans;
@@ -201,18 +208,3 @@ box-sizing: border-box;
 
 }
 
-.title-align {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-
-}
-
-.left-arrow {
-  width: 10%;
-  padding-top: 10px;
-  padding-right: 10px;
-}
-.img_signin{
-  width: 10%;
-}
