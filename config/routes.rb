@@ -13,6 +13,9 @@ Rails.application.routes.draw do
     end
   end
   resources :participants, only: [:destroy]
+  get 'games/search', to: 'games#search'
+  # get 'games/search/search_games', to: 'games#search_games'
+  get 'games/suggestions', to: 'games#suggestions'
   resources :games, only: [:show]
   resources :libraries, only: [:index, :create, :destroy]
 

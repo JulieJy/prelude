@@ -249,6 +249,7 @@ DEPENDENCIES
   puma
   rails (= 5.2.2)
   redis
+  rest-client
   sassc-rails
   select2-rails
   simple_calendar (~> 2.0)
