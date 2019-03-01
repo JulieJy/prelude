@@ -144,16 +144,16 @@ games.each {|url| Scrapper.scrape_game(url, category)}
 p 'ok'
 
 #page 2
-p 'scrapping 10 strategy games - p2'
-strategy_url = "https://www.espritjeu.com/ajax/affichage_gabarit.ajax.php?idGabarit=10001&numPage=1&page[10001]=1&themTri%5B10001%5D=&categ_them=11&categ_them_auto=&categorie_auto=&prixmin=5&prixmax=135&fltrsChoices%5B16%5D%5B%5D=25"
-games = Scrapper.fetch_urls(strategy_url)
-category = "Stratégie"
-games.each {|url| Scrapper.scrape_game(url, category)}
-p 'ok'
-
-p 'scrapping 10 apero games'
-apero_url = "https://www.espritjeu.com/ajax/affichage_gabarit.ajax.php?idGabarit=10001&numPage=1&page[10001]=1&themTri%5B10001%5D=&categ_them=41&categ_them_auto=&categorie_auto=&prixmin=2&prixmax=165&fltrsChoices%5B16%5D%5B%5D=25"
-games = Scrapper.fetch_urls(apero_url)
-category = "Ambiance"
-games.each {|url| Scrapper.scrape_game(url, category)}
-p 'ok'
+# p 'scrapping 10 strategy games - p2'
+#strategy_url = "https://www.espritjeu.com/ajax/affichage_gabarit.ajax.php?idGabarit=10001&numPage=1&page[10001]=1&themTri%5B10001%5D=&categ_them=11&categ_them_auto=&categorie_auto=&prixmin=5&prixmax=135&fltrsChoices%5B16%5D%5B%5D=25"
+#games = Scrapper.fetch_urls(strategy_url)
+# category = "Stratégie"
+# games.each {|url| Scrapper.scrape_game(url, category)}
+# p 'ok'
+#
+# p 'scrapping 10 apero games'
+# apero_url = "https://www.espritjeu.com/ajax/affichage_gabarit.ajax.php?idGabarit=10001&numPage=1&page[10001]=1&themTri%5B10001%5D=&categ_them=41&categ_them_auto=&categorie_auto=&prixmin=2&prixmax=165&fltrsChoices%5B16%5D%5B%5D=25"
+# games = Scrapper.fetch_urls(apero_url)
+# category = "Ambiance"
+# games.each {|url| Scrapper.scrape_game(url, category)}
+# p 'ok'
