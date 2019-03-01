@@ -19,9 +19,10 @@
   .form-control {
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    box-shadow: 1px 4px 10px rgba(21, 35, 56, 0.26);
+    box-shadow: 1px 4px 10px rgba(21, 35, 56, 0.15);
 
     border-radius: 3px;
+    font-size: 15px;
   }
   .form-control-label {
     font-family: Open Sans;
@@ -30,7 +31,7 @@
     line-height: normal;
     font-size: 14px;
   }
-  .form-check-label {
+  .form-check-label  {
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
@@ -38,6 +39,16 @@
     font-size: 14px;
     padding-left: 10px;
     opacity: 0.5;
+  }
+  .form-text {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 14px;
+    padding-bottom: 60px;
+    opacity: 0.5;
+
   }
   .form-check-input {
     border: 1px solid;
@@ -61,17 +72,28 @@
 }
 
 
+
 .title_sign_up {
 font-family: Open Sans;
 font-style: normal;
 font-weight: bold;
 line-height: 41px;
-font-size: 32px;
+font-size: 28px;
 letter-spacing: 0.01em;
 color: #252A31;
 }
 
-
+#btn_h3_google {
+font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 14px;
+text-align: center;
+color: #252A31;
+margin-left: 25px;
+padding-bottom: 10px;
+}
 
 .btn_h3 {
 font-family: Open Sans;
@@ -81,8 +103,8 @@ line-height: normal;
 font-size: 14px;
 text-align: center;
 color: #252A31;
-padding-bottom: 30px;
-margin-top: 20px;
+padding-bottom: 10px;
+// margin-top: 20px;
 }
 
 #btn_h3_facebook {
@@ -94,8 +116,17 @@ font-size: 14px;
 text-align: center;
 color: #FFFFFF;
 padding: 20px;
+margin-bottom: 23px;
+// padding-bottom: 10px;
 
 }
+
+// #btn_h3_google {
+// background: #FFFFFF;
+// border: 1px solid #DADADA;
+// box-sizing: border-box;
+
+// }
 
 .btn_sign_up_main {
 
@@ -111,11 +142,14 @@ box-sizing: border-box;
   margin-right: auto;
   margin-bottom: 12px;
   border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
 #btn_sign_up_facebook {
-  background: #1C407B;
+  background: #24538e;
   margin-top: 50px;
 }
 
@@ -146,6 +180,39 @@ box-sizing: border-box;
   text-align: center;
 }
 
+.btn_inscription {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 1px 4px 10px rgba(21, 35, 56, 0.26);
+  border-radius: 50px;
+  width: 229px;
+  height: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 14px;
+  text-align: center;
+
+
+}
+
+.title-align {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+}
+
+.left-arrow {
+  width: 10%;
+  padding-top: 10px;
+  padding-right: 10px;
+}
 .img_signin{
-  width: 10px;
+  width: 10%;
 }
