@@ -1,9 +1,27 @@
-<h1>Suggestions</h1>
-
-<% if @games[0].nil? %>
-  <p>Désolé, aucun jeu ne correspond à tes critères :( </p>
+<div class="suggestions-body">
+  <%= link_to games_search_path do %>
+    <div class="title-align">
+      <%= image_tag 'left-arrow.png', class: "left-arrow" %>
+      <h2 class="title_sign_up">Retour à la recherche</h2>
+    </div>
+  <% end %>
+  <% if @games[0].nil? %>
+    <div class="no-game">
+      <p>Désolé, aucun jeu ne correspond à tes critères... Essaye encore</p>
+      <span id="smiley">;)</span>
+    </div>
   <% else %>
-    <% @games.each do |hash| %>
-      <li><%= link_to hash["name"], game_path(hash["id"])%></li>
+    <h1 id="title">Nos suggestions</h1>
+    <% @games.each do |game| %>
+      <%= link_to game_path(game["id"]) do %>
+      <div class="card-game">
+        <img src="<%= game.picture %>">
+        <div class="card-game-infos">
+          <h2><%= game.name %></h2>
+          <p><%= game.category %> - De <%= game.nb_player_min %> à <%= game.nb_player_max %> joueurs</p>
+        </div>
+      </div>
+      <% end %>
     <% end %>
-<% end %>
+  <% end %>
+</div>
