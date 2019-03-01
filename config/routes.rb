@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   resources :events, only: [:new, :create, :show] do
     resources :participants, only: [:create]
   end
+  resources :participants, only: [] do
+    member do
+      patch "accept"
+      patch "decline"
+    end
+  end
   resources :participants, only: [:destroy]
   get 'games/search', to: 'games#search'
   # get 'games/search/search_games', to: 'games#search_games'

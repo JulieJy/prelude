@@ -1,0 +1,6 @@
+function reRenderParticipantsList() {
+  let html = "<%= j render 'shared/participants-avatar', current_participant: @participant, event: @event %>";
+  document.querySelector(".participants").innerHTML = html;
+}
+
+reRenderParticipantsList();
