@@ -15,7 +15,7 @@ gem "simple_calendar", "~> 2.0"
 gem "select2-rails"
 gem "geocoder"
 
-
+gem "rest-client"
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.5.0'

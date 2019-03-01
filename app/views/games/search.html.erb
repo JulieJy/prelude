@@ -5,7 +5,11 @@
   <label for="nb_player">Vous êtes combien ?</label>
   <input type="number" name= "nb_player" id= "nb_player">
   <label for="duration">Quelle durée de jeu ?</label>
-  <input type="number" name= "duration" id= "duration">
+  <select name="duration" id="duration">
+    <option value="fast"> Rapide (- de 35min) </option>
+    <option value="medium"> Moyen (entre 35min et 1h)</option>
+    <option value="long"> Long (+ de 1h) </option>
+  </select>
   <label for="category">Quel type de jeu ?</label>
   <select name="category" id="category">
     <option value="Ambiance"> Ambiance </option>
@@ -14,4 +18,3 @@
   </select>
   <input type="submit" value="Trouver !">
 </form>
-
