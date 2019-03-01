@@ -15,5 +15,7 @@
 
 <%=  %>
 
-<%= link_to "accept",  accept_participant_path(current_participant), :method=> :patch, class:"btn btn-success", remote: true %>
-<%= link_to "decline", decline_participant_path(current_participant), :method=> :patch, class:"btn btn-danger", remote: true %>
+<% if current_user != event.creator %>
+  <%= link_to "accept",  accept_participant_path(current_participant), :method=> :patch, class:"btn btn-success", remote: true %>
+  <%= link_to "decline", decline_participant_path(current_participant), :method=> :patch, class:"btn btn-danger", remote: true %>
+<% end %>

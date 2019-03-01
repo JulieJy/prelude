@@ -14,7 +14,7 @@
    <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]} %>
   </div>
 
-  <%= f.input :invitation_emails, collection: User.pluck(:email) %>
+  <%= f.input :invitation_emails, collection: User.pluck(:email), class: "span8 ac-select2" %>
 
   <%= f.input :nb_person, input_html: { min: '0', step: 'any' }  %>
 
