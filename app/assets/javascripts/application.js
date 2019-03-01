@@ -5,7 +5,7 @@ const nb = document.querySelector('#nb_player');
 const btnminus = document.querySelector('#glyphicon-minus');
 btnminus.addEventListener('click', (event) => {
   event.preventDefault();
-  let oldValue = Number.parseInt(nb.value)
+  let oldValue = Number.parseInt(nb.value);
   console.log(oldValue--);
   nb.value = oldValue--;
 });
