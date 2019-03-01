@@ -1,33 +1,65 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :first_name,
-                required: true %>
-    <%= f.input :last_name,
-                required: true %>
-    <%= f.input :address,
-                required: true %>
-    <%= f.input :phone_number,
-                required: true %>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+      <div class="title-align">
+      <%= image_tag 'left-arrow.png', class: "left-arrow" %>
+      <h2 class="title_sign_up">Bonjour !</h2>
+      </div>
+
+
+        <div class="btn_sign_up" id="btn_sign_up_facebook">
+          <%= image_tag 'facebook_logo.png', class: "img_signin" %>
+
+          <h3 id="btn_h3_facebook">S'inscrire avec Facebook</h3>
+        </div>
+        <div class="btn_sign_up btn_sign_up_main">
+          <%= image_tag 'google_logo.png', class: "img_signin" %>
+
+          <h3 id="btn_h3_google">S'inscrire avec Google</h3>
+        </div>
+        <div class="btn_sign_up btn_sign_up_main"><h3 class="btn_h3">S'inscrire avec mon e-mail</h3></div>
+
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs form-login">
+            <%= f.input :first_name,
+                        required: true, placeholder: "Prénom", label: "Prénom" %>
+            <%= f.input :last_name,
+                        required: true, placeholder: "Nom", label: "Nom" %>
+            <%= f.input :address,
+                        required: true, placeholder: "Adresse", label: "Adresse" %>
+            <%= f.input :phone_number,
+                        required: true, placeholder: "Téléphone", label: "Téléphone" %>
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" }, placeholder: "E-mail", label: "E-mail"%>
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" }, placeholder: "Mot de passe", label: "Mot de passe" %>
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" }, placeholder: "Mot de passe confirmation", label: "Mot de passe confirmation" %>
+
+            <div class="form-actions">
+              <%= f.button :submit, "INSCRIPTION", class: "btn btn_inscription"  %>
+            </div>
+              <% end %>
+
+              <%= render "devise/shared/links" %>
+          </div>
+
+
+
+
+      <!-- Insert form here -->
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
