@@ -7,7 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require_relative '../app/services/scrapping.rb'
-
+p 'I destroy all libraries'
+Library.destroy_all
+p 'I destroy all events'
+Event.destroy_all
+p 'I destroy all participants'
 Participant.destroy_all
 p 'I destroy all games'
 Game.destroy_all
