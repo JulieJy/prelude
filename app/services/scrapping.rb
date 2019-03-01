@@ -1,11 +1,20 @@
-require 'open-uri'
-require 'nokogiri'
-
 class Scrapper
 # On récupère tous les liens des jeux de stratégie (11)
   def self.fetch_urls(url)
     # strategy_url = "https://www.espritjeu.com/jeux-de-strategie.html#filtres=25"
-    doc = Nokogiri::HTML(open(url).read)
+    headers = {
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cache-Control": "max-age=0",
+      "Connection": "keep-alive",
+      "Cookie": "PHPSESSID=2ikijqmnv3mk00c59h7u184a33; _gcl_au=1.1.892566092.1550566149; _ga=GA1.2.1699820971.1550566149; acces_admin=false; _gid=GA1.2.1350096614.1551359219; df-search-b0d903cedd7620be0e9468e01bbb930d={%22session_id%22:%2221ec1a4f50d4ffc55c1dc87ce37664a7%22%2C%22registered%22:true%2C%22query%22:%22incontournable%20ambiance%22}; visite=db9664e9f7fd60e789fb4c7bb0abbfab",
+      "Host": "www.espritjeu.com",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+    }
+    response = RestClient.get(url, headers)
+    doc = Nokogiri::HTML(response.body)
     games = doc.search(".bp_designation a")
     games.take(10).map do |game|
       uri = URI.parse(game.attributes["href"].value)
@@ -45,6 +54,7 @@ class Scrapper
       )
     # cloudinary
     game.remote_picture_url = image[2].attributes["src"].value
+    p game.name
     p game.save!
   end
 
