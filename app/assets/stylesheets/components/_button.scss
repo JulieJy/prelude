@@ -1,0 +1,21 @@
+.btn_all {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 1px 4px 10px rgba(21, 35, 56, 0.26);
+  border-radius: 50px;
+  width: 229px;
+  height: 56px;
+  margin: 55px auto;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 14px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  &:active {
+    background : #F05D59;
+    color : white;
+  }
+}

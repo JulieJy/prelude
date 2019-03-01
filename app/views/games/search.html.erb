@@ -1,20 +1,45 @@
-<h1>Trouver un jeu</h1>
+<div class="container cont-search">
+  <div class="row">
+    <%= link_to root_path do %>
+      <div class="title-align">
+        <%= image_tag 'left-arrow.png', class: "left-arrow" %>
+        <h1 class="title_sign_up">Choisir son jeu</h1>
+      </div>
+      <% end %>
+    <div class="cont-questions">
+      <form action="/games/suggestions" method="GET">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-<form action="/games/suggestions" method="GET">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label for="nb_player">Vous êtes combien ?</label>
-  <input type="number" name= "nb_player" id= "nb_player">
-  <label for="duration">Quelle durée de jeu ?</label>
-  <select name="duration" id="duration">
-    <option value="fast"> Rapide (- de 35min) </option>
-    <option value="medium"> Moyen (entre 35min et 1h)</option>
-    <option value="long"> Long (+ de 1h) </option>
-  </select>
-  <label for="category">Quel type de jeu ?</label>
-  <select name="category" id="category">
-    <option value="Ambiance"> Ambiance </option>
-    <option value="Stratégie"> Stratégie </option>
-    <option value="Junior"> Junior </option>
-  </select>
-  <input type="submit" value="Trouver !">
-</form>
+        <label for="nb_player">Vous êtes combien ?</label>
+        <div class="col-xs-6 col-xs-offset-3">
+              <div class="input-group number-spinner">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus" id="glyphicon-minus"></span></button>
+                </span>
+                <input type="number" name= "nb_player" class="form-control text-center" min="1" max="8+" value="1" id= "nb_player">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus" id="glyphicon-plus"></span></button>
+                </span>
+              </div>
+            </div>
+
+        <label for="duration">Quelle durée de jeu ?</label>
+        <select name="duration" id="duration">
+          <option value="fast"> Rapide (- de 35min) </option>
+          <option value="medium"> Moyen (entre 35min et 1h)</option>
+          <option value="long"> Long (+ de 1h) </option>
+        </select>
+
+        <label for="category">Quel type de jeu ?</label>
+        <br>
+        <select name="category" id="category">
+          <option value="Ambiance"> Ambiance </option>
+          <option value="Stratégie"> Stratégie </option>
+          <option value="Junior"> Junior </option>
+        </select>
+        <br>
+      <input class="btn_all" type="submit" value="Trouver !">
+      </div>
+    </form>
+  </div>
+</div>
