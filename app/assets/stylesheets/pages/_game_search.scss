@@ -1,0 +1,33 @@
+.cont-search {
+  background: linear-gradient(167.48deg, #F6A362 5.69%, #EA934F 96.53%);
+  text-align : center;
+  height : 100vh;
+  h1 {
+    text-align : left!important;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 41px;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    color: #F2F2F2;
+  }
+  label {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 24px;
+    letter-spacing: -0.458235px;
+    color: #FFFFFF;
+  }
+}
+
+.cont-questions {
+  display: flex;
+  text-align : center;
+}
+
+#nb_player {
+
+}
