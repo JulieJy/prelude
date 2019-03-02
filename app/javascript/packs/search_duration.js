@@ -1,7 +1,17 @@
-const boxes = document.querySelectorAll('.duration-box');
+const durationBoxes = document.querySelectorAll('.duration-box');
 
-if (boxes) {
-  boxes.forEach((box) => {
+if (durationBoxes) {
+  durationBoxes.forEach((box) => {
+    box.addEventListener('click', (event) => {
+    box.classList.toggle("active");
+    });
+  });
+}
+
+const categoryBoxes = document.querySelectorAll('.category-box');
+
+if (categoryBoxes) {
+  categoryBoxes.forEach((box) => {
     box.addEventListener('click', (event) => {
     box.classList.toggle("active");
     });
