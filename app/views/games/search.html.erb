@@ -10,7 +10,7 @@
       <form action="/games/suggestions" method="GET">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-        <label for="nb_player">Vous êtes combien ?</label>
+        <label class="label_question" for="nb_player">Vous êtes combien ?</label>
         <div class="col-xs-6 col-xs-offset-3">
               <div class="input-group number-spinner">
                 <span class="input-group-btn">
@@ -23,14 +23,29 @@
               </div>
             </div>
 
-        <label for="duration">Quelle durée de jeu ?</label>
-        <select name="duration" id="duration">
-          <option value="fast"> Rapide (- de 35min) </option>
-          <option value="medium"> Moyen (entre 35min et 1h)</option>
-          <option value="long"> Long (+ de 1h) </option>
-        </select>
+        <div>
+          <label class="label_question" for="duration">Quelle durée de jeu ?</label>
+          <div class="cont-duration">
+            <div class="row">
+              <div class="col-xs-12">
+                <div>
+                  <input type="radio" name="duration" value="fast" id="fast" class = "hidden">
+                  <label class= "duration-box" for="fast">Rapide (- de 35min)</label>
+                </div>
+                <div>
+                  <input type="radio" name="duration" value="medium" id="medium" class = "hidden">
+                  <label class= "duration-box" for="medium">Moyen (entre 35min et 1h)</label>
+                </div>
+                <div>
+                  <input type="radio" name="duration" value="long" id="long" class = "hidden">
+                  <label class= "duration-box" for="long">Long (+ de 1h)</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <label for="category">Quel type de jeu ?</label>
+        <label class="label_question" for="category">Quel type de jeu ?</label>
         <br>
         <select name="category" id="category">
           <option value="Ambiance"> Ambiance </option>
@@ -43,3 +58,10 @@
     </form>
   </div>
 </div>
+
+
+  <!--         <select name="duration" id="duration">
+            <option value="fast"> Rapide (- de 35min) </option>
+            <option value="medium"> Moyen (entre 35min et 1h)</option>
+            <option value="long"> Long (+ de 1h) </option>
+          </select> -->
