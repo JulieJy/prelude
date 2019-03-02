@@ -5,5 +5,6 @@ import "./sign_up";
 import "./avatar";
 import { initMapbox } from '../plugins/init_mapbox';
 import "./players"
+import "./search_duration"
 
 initMapbox();
