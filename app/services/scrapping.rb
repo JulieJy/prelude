@@ -45,39 +45,25 @@ class Scrapper
     description = doc.search(".cont-onglet p").text
     nb_player_min = nb_player.split("à")[0].to_i
     nb_player_max = nb_player.split("à")[1].to_i
-    p name
-
-    # game = Game.new(
-    #   name: name,
-    #   nb_player_min: nb_player_min,
-    #   nb_player_max: nb_player_max.nil? ? nb_player_min : nb_player_max,
-    #   duration: if duration_moy <= 20
-    #               "fast"
-    #             elsif duration_moy <= 45
-    #               "medium"
-    #             else
-    #               "long"
-    #             end,
-    #   description: description.blank? ? "Erreur, ce jeu n'a pas de description :(" : description,
-    #   category: category
-    #   )
-    # cloudinary
+    game = Game.new(
+      name: name,
+      nb_player_min: nb_player_min,
+      nb_player_max: nb_player_max.nil? ? nb_player_min : nb_player_max,
+      duration: if duration_moy <= 20
+                  "fast"
+                elsif duration_moy <= 45
+                  "medium"
+                else
+                  "long"
+                end,
+      description: description.blank? ? "Erreur, ce jeu n'a pas de description :(" : description,
+      category: category
+      )
     game.remote_picture_url = image[2].attributes["src"].value
-    # p game.name
-    # p game.duration
-    # p duration_moy
-    # p game.duration
-    # p game.save!
+    p game.name
+    p game.save!
   end
 
   p "Fetching urls"
   p " ------------------------------- "
 end
-
-      # duration: (if duration.to_i <= 35
-      #             "fast"
-      #           elsif duration.to_i <= 65
-      #             "medium"
-      #           else
-      #             "long"
-      #           end),
