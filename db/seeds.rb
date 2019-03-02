@@ -57,51 +57,6 @@ user4 = User.create!(
   phone_number:"555-345-322",
   password: "secret")
 
-# p 'creating games...'
-# game1 = Game.create!(
-
-#   name:"Les aventuriers du rail",
-#   nb_player_min: 1,
-#   nb_player_max: 4,
-#   description: "Les Aventuriers du Rail - Europe  est le deuxième volume de la célèbre série des Aventuriers du Rail dont la version de base se joue sur une carte des USA. Plus qu'une nouvelle carte, cette version incorpore de nouvelles routes (tunnels et ferries), et de nouvelles pièces de jeu, les gares.",
-#   picture: "https://www.espritjeu.com/upload/image/les-aventuriers-du-rail---europe-p-image-59803-grande.jpg",
-#   duration: 30,
-#   category: "Stratégie"
-# )
-
-# game2 = Game.create!(
-#   name:"7 wonders",
-#   nb_player_min: 1,
-#   nb_player_max: 4,
-#   description: "L'Antiquité et ses merveilles. Revivez l'épopée des grandes constructions avec ce jeu de cartes et de stratégie !",
-#   picture: "https://cdn3.philibertnet.com/310399-large_default/7-wonders-vf.jpg",
-#   duration: 120,
-#   category: "Stratégie"
-#   )
-
-# game3 = Game.create!(
-#   name:"Code Names",
-#   nb_player_min: 1,
-#   nb_player_max: 4,
-#   description: "Jouez les espions et retrouvez vos alliés avec des Noms de Code! Codenames est un jeu d'expression, d'association d'idées et de déduction qui se joue en équipe.",
-#   picture: "https://static.fnac-static.com/multimedia/Images/FR/NR/c1/b8/78/7911617/1540-1/tsp20160826112220/Codenames-Iello.jpg",
-#   duration: 120,
-#   category: "Ambiance"
-#   )
-
-
-# game4 = Game.create!(
-#   name:"Tu te mets combien ?",
-#   nb_player_min: 1,
-#   nb_player_max: 4,
-#   description: "Évalue tes connaissances de 1 à 10 et réponds aux questions !",
-#   picture: "https://cdn3.philibertnet.com/419835-large_default/ttmc-tu-te-mets-combien-.jpg",
-#   duration: 90,
-#   category: "Junior"
-#   )
-# p '4 games created'
-
-
 bar1 = Bar.create!(
   name: "Suberry",
   address: "17 Rue d'Inkermann, 69100 Villeurbanne ",
