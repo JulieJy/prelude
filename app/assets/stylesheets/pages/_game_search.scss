@@ -1,7 +1,7 @@
 .cont-search {
   background: linear-gradient(167.48deg, #F6A362 5.69%, #EA934F 96.53%);
   text-align : center;
-  height : 100vh;
+  height : 100%;
   h1 {
     text-align : left!important;
     font-family: Open Sans;
@@ -23,6 +23,10 @@
     margin-top: 60px;
     margin-bottom: 30px;
     // align-items: space-between;
+  }
+
+  .btn_all {
+    margin: 30px auto;
   }
 }
 
