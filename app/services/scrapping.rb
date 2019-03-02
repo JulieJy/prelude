@@ -35,6 +35,13 @@ class Scrapper
     # image = doc.search(".light")
     nb_player = doc.search(".fa_joueurs").text
     duration = doc.search(".fa_duree").text
+    if duration.split.include?("Environ")
+      duration_moy = duration.split[1].to_i
+    elsif duration.split.include?("heures")
+      duration_moy = (duration.split[0].to_i + duration.split[2].to_i)/2*60
+    elsif duration.split.include?("minutes")
+      duration_moy = (duration.split[0].to_i + duration.split[2].to_i)/2
+    end
     description = doc.search(".cont-onglet p").text
     nb_player_min = nb_player.split("à")[0].to_i
     nb_player_max = nb_player.split("à")[1].to_i
@@ -42,17 +49,16 @@ class Scrapper
       name: name,
       nb_player_min: nb_player_min,
       nb_player_max: nb_player_max.nil? ? nb_player_min : nb_player_max,
-      duration: (if duration.to_i <= 35
+      duration: if duration_moy <= 20
                   "fast"
-                elsif duration.to_i <= 65
+                elsif duration_moy <= 45
                   "medium"
                 else
                   "long"
-                end),
+                end,
       description: description.blank? ? "Erreur, ce jeu n'a pas de description :(" : description,
       category: category
       )
-    # cloudinary
     game.remote_picture_url = image[2].attributes["src"].value
     p game.name
     p game.save!
