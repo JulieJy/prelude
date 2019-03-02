@@ -45,14 +45,28 @@
           </div>
         </div>
 
-        <label class="label_question" for="category">Quel type de jeu ?</label>
-        <br>
-        <select name="category" id="category">
-          <option value="Ambiance"> Ambiance </option>
-          <option value="Stratégie"> Stratégie </option>
-          <option value="Junior"> Junior </option>
-        </select>
-        <br>
+        <div>
+          <label class="label_question" for="category">Quel type de jeu ?</label>
+          <div class="cont-category">
+            <div class="row">
+              <div class="col-xs-12">
+                <div>
+                  <input type="radio" name="category" value="Ambiance" id="Ambiance" class = "hidden">
+                  <label class= "category-box" for="Ambiance">Ambiance</label>
+                </div>
+                <div>
+                  <input type="radio" name="category" value="Stratégie" id="Stratégie" class = "hidden">
+                  <label class= "category-box" for="Stratégie">Stratégie</label>
+                </div>
+                <div>
+                  <input type="radio" name="category" value="Junior" id="Junior" class = "hidden">
+                  <label class= "category-box" for="Junior">Junior</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       <input class="btn_all" type="submit" value="Trouver !">
       </div>
     </form>
@@ -60,6 +74,14 @@
 </div>
 
 
+        <!-- <label class="label_question" for="category"></label>
+        <br>
+        <select name="category" id="category">
+          <option value="Ambiance"> Ambiance </option>
+          <option value="Stratégie"> Stratégie </option>
+          <option value="Junior"> Junior </option>
+        </select>
+        <br> -->
   <!--         <select name="duration" id="duration">
             <option value="fast"> Rapide (- de 35min) </option>
             <option value="medium"> Moyen (entre 35min et 1h)</option>

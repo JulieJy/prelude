@@ -56,14 +56,14 @@
   border: none!important;
 }
 
-.cont-duration {
+.cont-duration, .cont-category {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.duration-box {
+.duration-box, .category-box {
   color: white;
   // flex: 0 0 30%;
   border-radius: 10px;
