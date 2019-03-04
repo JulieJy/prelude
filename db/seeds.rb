@@ -1,22 +1,28 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-require_relative '../app/services/scrapping.rb'
 p 'I destroy all libraries'
 Library.destroy_all
 p 'I destroy all participants'
 Participant.destroy_all
 p 'I destroy all games'
-Game.destroy_all
+Game.delete_all
 p 'I destroy all users'
 User.destroy_all
 p 'I destroy all bars'
 Bar.destroy_all
+
+
+
+p 'loading games from yml'
+file_path = "lib/games.yml"
+seed_file = File.join(file_path)
+seeds = YAML::load_file(seed_file)
+# Game.create(seeds["games"])
+
+
+seeds.each do |game_data|
+  picture_url = game_data.delete('picture')
+  g = Game.create!(game_data)
+  g.update_column(:picture, picture_url)
+end
 
 
 p 'I create 2 users'
@@ -75,10 +81,5 @@ bar3 = Bar.create!(
 p '3 bars created'
 
 
-p 'loading games from yml'
-file_path = "lib/games.yml"
-seed_file = File.join(file_path)
-seeds = YAML::load_file(seed_file)
-Game.create(seeds["games"])
 p 'ok'
 

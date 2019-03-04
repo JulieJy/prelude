@@ -1,7 +1,12 @@
+require_relative '../../app/services/scrapping.rb'
+
 namespace :games do
     desc "scrapping to yml"
     task scrap_from_web: :environment do
       # Page 1 - 30 games
+
+      Game.destroy_all
+
       p 'scrapping 30 strategy games'
       strategy_url = "https://www.espritjeu.com/ajax/affichage_gabarit.ajax.php?idGabarit=10001&numPage=1&page[10001]=1&themTri%5B10001%5D=&categ_them=11&categ_them_auto=&categorie_auto=&prixmin=5&prixmax=135&fltrsChoices%5B16%5D%5B%5D=25"
       games = Scrapper.fetch_urls(strategy_url)
@@ -39,15 +44,23 @@ namespace :games do
       category = "Ambiance"
       games.each {|url| Scrapper.scrape_game(url, category)}
       p 'ok'
+
+
+      Rake::Task["games:gamesyml"].invoke
     end
-  end
 
   desc "BDD games to yml"
   task gamesyml: :environment do
+    ap "je suis al"
     file_path = "lib/games.yml"
     ATTRIBUTES_TO_EXCLUDE = %w(id updated_at created_at)
-    list = Game.all.each_with_object({}) do |game, hash|
-     hash["-"] = game.attributes.reject { |attribute| ATTRIBUTES_TO_EXCLUDE.include?(attribute) }
+
+    games_data = Game.all.map do |game|
+      attrs = game.attributes
+      attrs.reject! {|k, v| ATTRIBUTES_TO_EXCLUDE.include?(k) }
+      attrs
     end
+
+    File.open(file_path, 'w') {|f| f.write games_data.to_yaml }
   end
 end
