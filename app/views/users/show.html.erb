@@ -12,7 +12,7 @@
   <div class="content_wht_form">
     <div class="user_card">
       <div class="profile_image">
-        <%= cl_image_tag(current_user.photo, alt: "profile_picture", id: "avatar_profile") %>
+        <%= cl_image_tag(@user.photo, alt: "profile_picture", id: "avatar_profile") %>
       </div>
       <div class="user_info">
         <div class="name">
@@ -33,7 +33,7 @@
 
 
     <div class="container">
-    <hr>
+      <hr>
       <h3>Mes soirées</h3>
       <div class="ml scroller">
         <% @user.creator_events.order(date: :desc).each do |event| %>
@@ -48,12 +48,13 @@
       <h3>Mes invitations</h3>
       <div class="ml scroller">
         <% @user.attendee_events.each do |event| %>
-          <%= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
-        </div>
-      <% end %>
+          <p>
+            <%= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
+          </p>
+        <% end %>
+      </div>
 
       <hr>
-
       <h3>Ma bibliothèque de jeux</h3>
       <div class="ml scroller">
         <% @user.games.order(name: :asc).each do |game| %>
@@ -64,6 +65,8 @@
       <hr>
     </div>
   </div>
+
+
   <div class="container">
     <%= simple_form_for @library do |f| %>
       <%= f.input :game_id, collection: Game.order(:name), input_html: { class: 'choices' }, label: false %>
