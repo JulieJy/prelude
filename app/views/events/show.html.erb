@@ -1,42 +1,42 @@
+
+<div class="show-container">
 <div class="container ">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3 map-show">
+  <div class="row wide">
+    <div class="col-md-6 col-md-offset-3 ">
 
 
-      <div class="box-show">
+      <div class="box-text">
+        <h3>Soirée Jeux de  <span> <%= @event.creator.first_name %>
+         <%= @event.creator.last_name %></h3></span>
+
+
+       <p><i class="fa far fa-clock"></i><%= @event.date.strftime("%m/%d") %> <%= @event.time.strftime("at %I:%M%p") %></p>
+       <p><i class="fas fa-map-marker-alt"></i><%= @event.place %></p>
+       <p><i class="fas fa-user-alt"></i>Number of participants <%= @event.nb_person %></p>
+      </div>
+
+
+      <h5 class="parti-title">Qui va participer</h5>
+       <div class="participants">
+        <%= render 'shared/participants-avatar', current_participant: @participant, event: @event %>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
         <div
          class="event-map"
          id="map"
          style="width: 100%;
-         height: 500px;"
+         height: 150px;"
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 
+         </div>
 
+       <%= link_to t("demarrer", default: "Demarrer la soirée"), games_search_path, class: "btn-demarrer text-center center-block" %>
 
-      </div>
-
-      <div class="text-center box-text">
-      <h1>EVENT SHOW</h1>
-        <h4>Soirée Jeux de  <%= @event.creator.first_name %>
-         <%= @event.creator.last_name %></h4>
-
-       <p>Event date is <%= @event.date %></p>
-       <p>Event time is <%= @event.time %></p>
-       <p>Event place is in <%= @event.place %></p>
-       <p>Number of participants <%= @event.nb_person %></p>
-       </div>
-
-          <div class="participants-box">
-              <div class="participants">
-                 <%= render 'shared/participants-avatar', current_participant: @participant, event: @event %>
-              </div>
-          </div>
-                <button class="btn btn-primary text-center">DEMARRER LA SOIRÉE</button>
-      </div>
-
-
-
-    </div>
-  </div>
 </div>
