@@ -1,25 +1,20 @@
-<div class="container cont-search">
-  <div class="row">
+<div class="cont-search">
+  <div class="cont-link">
     <%= link_to root_path do %>
-      <div class="title-align">
-        <%= image_tag 'left-arrow.png', class: "left-arrow" %>
-        <h1 class="title_sign_up">Choisir son jeu</h1>
-      </div>
-      <% end %>
+      <%= image_tag 'left-arrow_white.png', class: "left-arrow" %>
+    <% end %>
+    <h1 class="title_sign_up">Choisir son jeu</h1>
+  </div>
     <div class="cont-questions">
       <form action="/games/suggestions" method="GET">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
         <label class="label_question" for="nb_player">Vous êtes combien ?</label>
         <div class="col-xs-6 col-xs-offset-3">
-              <div class="input-group number-spinner">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus" id="glyphicon-minus"></span></button>
-                </span>
-                <input type="number" name= "nb_player" class="form-control text-center" min="1" max="8+" value="1" id= "nb_player">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus" id="glyphicon-plus"></span></button>
-                </span>
+              <div class="number-spinner">
+                  <button id="btnminus"><i class="fas fa-minus"></i></button>
+                <input type="number" name= "nb_player" class="form-control text-center" min="1" max="8" value="1" id= "nb_player">
+                  <button id="btnplus"><i class="fas fa-plus"></i></button>
               </div>
             </div>
         <div>
@@ -71,3 +66,4 @@
     </form>
   </div>
 </div>
+
