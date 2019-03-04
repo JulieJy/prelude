@@ -2,6 +2,10 @@
   background: linear-gradient(167.48deg, #F6A362 5.69%, #EA934F 96.53%);
   text-align : center;
   height : 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
   h1 {
     text-align : left!important;
     font-family: Open Sans;
@@ -27,7 +31,8 @@
 
   form {
     background: linear-gradient(167.48deg, #F6A362 5.69%, #EA934F 96.53%);
-    height: 100%;
+    height: fit-content;
+    width: 100%;
   }
 
   body {
@@ -59,19 +64,32 @@
   text-align: center;
 }
 
-.input-group.number-spinner {
+.number-spinner {
+  display: flex;
+  align-items: space-between;
 }
 
-.btn.btn-default {
+#btnminus, #btnplus {
+  border: 1px solid #ffffff61;
+  padding: 0!important;
   background-color: #ffffff14;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.10);
   color : white;
-  border: 1px solid #ffffff61;
-  &.active {
+  min-width: 35px;
+  height: 35px;
+  &:active {
     box-shadow: none!important;
     background-color: white!important;
     color: #f09b58!important;
+    border: 1px solid #ffffff61;
   }
+  // &:active {
+  //   border: 1px solid #ffffff61;
+  //   padding: 0!important;
+  //   background-color: #ffffff14;
+  //   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.10);
+  //   color : white;
+  // }
 }
 
 .cont-duration, .cont-category {

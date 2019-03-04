@@ -1,4 +1,4 @@
-<div class="container cont-search">
+<div class="cont-search">
   <div class="row">
     <%= link_to root_path do %>
       <div class="title-align">
@@ -12,14 +12,10 @@
 
         <label class="label_question" for="nb_player">Vous êtes combien ?</label>
         <div class="col-xs-6 col-xs-offset-3">
-              <div class="input-group number-spinner">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus" id="glyphicon-minus"></span></button>
-                </span>
-                <input type="number" name= "nb_player" class="form-control text-center" min="1" max="8+" value="1" id= "nb_player">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus" id="glyphicon-plus"></span></button>
-                </span>
+              <div class="number-spinner">
+                  <button id="btnminus"><i class="fas fa-minus"></i></button>
+                <input type="number" name= "nb_player" class="form-control text-center" min="1" max="8" value="1" id= "nb_player">
+                  <button id="btnplus"><i class="fas fa-plus"></i></button>
               </div>
             </div>
         <div>
@@ -71,3 +67,4 @@
     </form>
   </div>
 </div>
+
