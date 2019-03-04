@@ -19,7 +19,9 @@
 
           <h3 id="btn_h3_google">S'inscrire avec Google</h3>
         </div>
-        <div class="btn_sign_up btn_sign_up_main"><h3 class="btn_h3">S'inscrire avec mon e-mail</h3></div>
+        <div class="btn_sign_up btn_sign_up_main" id="btn-email">
+          <h3 class="btn_h3">S'inscrire avec mon e-mail</h3>
+        </div>
 
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -36,7 +38,6 @@
                         required: true, placeholder: "Téléphone", label: "Téléphone" %>
             <%= f.input :email,
                         required: true,
-                        autofocus: true,
                         input_html: { autocomplete: "email" }, placeholder: "E-mail", label: "E-mail"%>
             <%= f.input :password,
                         required: true,

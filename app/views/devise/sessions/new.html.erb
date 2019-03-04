@@ -17,7 +17,9 @@
           <h3 id="btn_h3_google">Continuer avec Google</h3>
         </div>
 
-        <div class="btn_sign_up btn_sign_up_main"><h3 class="btn_h3">Continuer avec mon e-mail</h3></div>
+        <div class="btn_sign_up btn_sign_up_main" id="btn-email">
+          <h3 class="btn_h3">Continuer avec mon e-mail</h3>
+        </div>
 
          <div class="form-login">
            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
