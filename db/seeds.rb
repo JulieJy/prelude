@@ -74,41 +74,11 @@ bar3 = Bar.create!(
 
 p '3 bars created'
 
-# Page 1 - 30 games
-p 'scrapping 10 strategy games'
-strategy_url = "https://www.espritjeu.com/ajax/affichage_gabarit.ajax.php?idGabarit=10001&numPage=1&page[10001]=1&themTri%5B10001%5D=&categ_them=11&categ_them_auto=&categorie_auto=&prixmin=5&prixmax=135&fltrsChoices%5B16%5D%5B%5D=25"
-games = Scrapper.fetch_urls(strategy_url)
-category = "Stratégie"
-games.each {|url| Scrapper.scrape_game(url, category)}
+
+p 'loading games from yml'
+file_path = "lib/games.yml"
+seed_file = File.join(file_path)
+seeds = YAML::load_file(seed_file)
+Game.create(seeds["games"])
 p 'ok'
 
-p 'scrapping 10 apero games'
-apero_url = "https://www.espritjeu.com/ajax/affichage_gabarit.ajax.php?idGabarit=10001&numPage=1&page[10001]=1&themTri%5B10001%5D=&categ_them=41&categ_them_auto=&categorie_auto=&prixmin=2&prixmax=165&fltrsChoices%5B16%5D%5B%5D=25"
-games = Scrapper.fetch_urls(apero_url)
-category = "Ambiance"
-games.each {|url| Scrapper.scrape_game(url, category)}
-p 'ok'
-
-p 'scrapping 10 junior games'
-junior_url = "https://www.espritjeu.com/ajax/affichage_gabarit.ajax.php?idGabarit=10001&numPage=1&page[10001]=1&themTri%5B10001%5D=&categ_them=56&categ_them_auto=&categorie_auto=&prixmin=5&prixmax=260&fltrsChoices%5B16%5D%5B%5D=25"
-games = Scrapper.fetch_urls(junior_url)
-category = "Junior"
-games.each {|url| Scrapper.scrape_game(url, category)}
-p 'ok'
-
-# page 2
-# 14 games
-# p 'scrapping 10 strategy games - p2'
-# strategy_url = "https://www.espritjeu.com/ajax/affichage_gabarit.ajax.php?idGabarit=10001&numPage=2&page[10001]=2&categ_them=11&categorie=11&categ_them_auto=11&themTri%5B10001%5D=&categ_them=11&categ_them_auto=&categorie_auto=&prixmin=5&prixmax=135&fltrsChoices%5B16%5D%5B%5D=25"
-# games = Scrapper.fetch_urls(strategy_url)
-# category = "Stratégie"
-# games.each {|url| Scrapper.scrape_game(url, category)}
-# p 'ok'
-
-# 17 games
-# p 'scrapping 10 apero games'
-# apero_url = "https://www.espritjeu.com/ajax/affichage_gabarit.ajax.php?idGabarit=10001&numPage=2&page[10001]=2&categ_them=41&categorie=41&categ_them_auto=41&themTri%5B10001%5D=&categ_them=41&categ_them_auto=&categorie_auto=&prixmin=2&prixmax=165&fltrsChoices%5B16%5D%5B%5D=25"
-# games = Scrapper.fetch_urls(apero_url)
-# category = "Ambiance"
-# games.each {|url| Scrapper.scrape_game(url, category)}
-# p 'ok'

@@ -2,21 +2,34 @@ class Scrapper
 # On récupère tous les liens des jeux de stratégie (11)
   def self.fetch_urls(url)
     # strategy_url = "https://www.espritjeu.com/jeux-de-strategie.html#filtres=25"
+    # headers = {
+    #   "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+    #   "Accept-Encoding": "gzip, deflate, br",
+    #   "Accept-Language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+    #   "Cache-Control": "max-age=0",
+    #   "Connection": "keep-alive",
+    #   "Cookie": "PHPSESSID=2ikijqmnv3mk00c59h7u184a33; _gcl_au=1.1.892566092.1550566149; _ga=GA1.2.1699820971.1550566149; acces_admin=false; _gid=GA1.2.1350096614.1551359219; df-search-b0d903cedd7620be0e9468e01bbb930d={%22session_id%22:%2221ec1a4f50d4ffc55c1dc87ce37664a7%22%2C%22registered%22:true%2C%22query%22:%22incontournable%20ambiance%22}; visite=db9664e9f7fd60e789fb4c7bb0abbfab",
+    #   "Host": "www.espritjeu.com",
+    #   "Upgrade-Insecure-Requests": "1",
+    #   "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+    # }
+
     headers = {
       "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
       "Accept-Encoding": "gzip, deflate, br",
       "Accept-Language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
       "Cache-Control": "max-age=0",
       "Connection": "keep-alive",
-      "Cookie": "PHPSESSID=2ikijqmnv3mk00c59h7u184a33; _gcl_au=1.1.892566092.1550566149; _ga=GA1.2.1699820971.1550566149; acces_admin=false; _gid=GA1.2.1350096614.1551359219; df-search-b0d903cedd7620be0e9468e01bbb930d={%22session_id%22:%2221ec1a4f50d4ffc55c1dc87ce37664a7%22%2C%22registered%22:true%2C%22query%22:%22incontournable%20ambiance%22}; visite=db9664e9f7fd60e789fb4c7bb0abbfab",
+      "Cookie": "PHPSESSID=2ikijqmnv3mk00c59h7u184a33; _gcl_au=1.1.892566092.1550566149; _ga=GA1.2.1699820971.1550566149; acces_admin=false; visite=f923e59dafc38b668ca2a3e161a379cb; _gid=GA1.2.1526050631.1551708265",
       "Host": "www.espritjeu.com",
       "Upgrade-Insecure-Requests": "1",
       "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
-    }
+      }
+
     response = RestClient.get(url, headers)
     doc = Nokogiri::HTML(response.body)
     games = doc.search(".bp_designation a")
-    games.take(10).map do |game|
+    games.map do |game|
       uri = URI.parse(game.attributes["href"].value)
       uri.scheme = "http"
       uri.host = "www.espritjeu.com"
@@ -35,7 +48,9 @@ class Scrapper
     # image = doc.search(".light")
     nb_player = doc.search(".fa_joueurs").text
     duration = doc.search(".fa_duree").text
-    if duration.split.include?("Environ")
+    if duration.nil?
+      duration_moy = "durée indéterminée"
+    elsif duration.split.include?("Environ")
       duration_moy = duration.split[1].to_i
     elsif duration.split.include?("heures")
       duration_moy = (duration.split[0].to_i + duration.split[2].to_i)/2*60
@@ -49,11 +64,13 @@ class Scrapper
       name: name,
       nb_player_min: nb_player_min,
       nb_player_max: nb_player_max.nil? ? nb_player_min : nb_player_max,
-      duration: if duration_moy <= 20
+      duration: if duration_moy.nil?
+                  "durée indéterminée"
+                elsif duration_moy <= 20
                   "fast"
                 elsif duration_moy <= 45
                   "medium"
-                else
+                elsif duration_moy > 45
                   "long"
                 end,
       description: description.blank? ? "Erreur, ce jeu n'a pas de description :(" : description,
