@@ -3,7 +3,7 @@
   <%= link_to destroy_user_session_path, method: :delete do %>
     <i class="fas fa-sign-out-alt" id="logout"></i>
   <% end %>
-  <%= cl_image_tag(current_user.photo, alt: "profile_picture", id: "avatar") %>
+  <%= cl_image_tag(current_user.photo, alt: "profile_picture", id: "avatar_home") %>
     <%= image_tag "prelude_negatif.png", alt: "prelude logo", class:"prelude_logo_login" %>
     <div class="link_box">
       <!-- <span id="user_name"><%= current_user.first_name %> <%= current_user.last_name %></span> -->
