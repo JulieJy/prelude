@@ -12,6 +12,7 @@ import 'flatpickr/dist/flatpickr.css';
 initMapbox();
 flatpickr('.date-calendar', {disableMobile: true});
 flatpickr('.time-calendar', {
+    disableMobile: true,
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
