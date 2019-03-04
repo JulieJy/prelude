@@ -1,11 +1,10 @@
 <div class="cont-search">
-  <div class="row">
+  <div class="cont-link">
     <%= link_to root_path do %>
-      <div class="title-align">
-        <%= image_tag 'left-arrow.png', class: "left-arrow" %>
-        <h1 class="title_sign_up">Choisir son jeu</h1>
-      </div>
-      <% end %>
+      <%= image_tag 'left-arrow_white.png', class: "left-arrow" %>
+    <% end %>
+    <h1 class="title_sign_up">Choisir son jeu</h1>
+  </div>
     <div class="cont-questions">
       <form action="/games/suggestions" method="GET">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
