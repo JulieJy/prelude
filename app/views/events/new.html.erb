@@ -1,28 +1,38 @@
+
 <div class="container">
   <div class="row">
+   <div class="col-md-6 col-md-offset-3">
 
-    <div class="col-md-6 col-md-offset-3">
-<div class="page-new">
-<h2 class="new-title">Créer une soirée jeux</h2>
-  <div class="form-group">
+      <div class="page-new">
+       <h2 class="new-title">Créer une soirée jeux</h2>
+       <div class="form-group">
+
       <%= simple_form_for @event do |f|%>
-      <%= f.input :date, class: "form-control" %>
-      <%= f.input :time %>
-      <%= f.input :place, label: 'bar? ou chez toi?', as: :radio_buttons, collection: ["Chez moi", "Bar"] %>
+
+      <%= f.input :date, as: :string, input_html:{class: "date-calendar", id:"event-btn"}, :placeholder => 'Date', label: false  %>
+
+      <%= f.input :time, as: :string , input_html:{class: "time-calendar", id:"event-btn"}, :placeholder => 'Heure', label: false  %>
+
+
+      <%= f.input_field :place, as: :radio_buttons, collection: ["Chez moi", "Bar"], input_html:{id:"event-btn"} %>
+
+
       <div class="dropdown_address">
-      <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]} %>
+      <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]}, input_html:{id:"event-btn"}, :placeholder => 'Invitez', label: false   %>
       </div>
 
-      <%= f.input :invitation_emails, collection: User.pluck(:email), class: "span8 ac-select2" %>
 
-      <%= f.input :nb_person, input_html: { min: '0', step: 'any' },class: "form-control"  %>
+      <%= f.input :invitation_emails, collection: User.pluck(:email), input_html:{class: "span8 ac-select2", id:"event-btn"}, :placeholder => 'Heure', label: false %>
 
+      <%= f.input :nb_person, input_html: { min: '0', step: 'any' }, input_html:{class: "form-control", id:"event-btn"}, placeholder: "Nombre de joueurs", label: false  %>
 
+      <%= f.submit "Créer une soirée", class: "event-btn-submit"%>
 
-      <%= f.submit "create" %>
    <% end %>
    </div>
 </div>
  </div>
   </div>
 </div>
+
+
