@@ -208,3 +208,15 @@ box-sizing: border-box;
 
 }
 
+.form-login {
+  padding: 0 20px;
+  overflow: hidden;
+  max-height: 0;
+  transition: all ease 0.9s;
+
+  &.show {
+    max-height: 20000px;
+  }
+}
+
+

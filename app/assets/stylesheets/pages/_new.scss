@@ -1,4 +1,20 @@
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #FFFFFF;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #FFFFFF;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #FFFFFF;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #FFFFFF;
+}
+::placeholder {
+  color: #FFFFFF;
+  opacity: 1; /* Firefox */
+}
 .page-new{
   background-color: #f05d59;
   padding: 20px;
@@ -13,7 +29,7 @@ font-weight: bold;
 line-height: 41px;
 font-size: 18px;
 letter-spacing: 0.01em;
-color: #F2F2F2;
+color: #FFFFFF;
 padding: 50px 20px;
 }
 
@@ -24,3 +40,25 @@ box-sizing: border-box;
 border-radius: 50px;
 
 }
+
+#event-btn{
+
+border: 1px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 50px;
+background-color: #f05d59;
+}
+
+.event-btn-submit{
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+padding:10px;
+position: relative;
+left: 20%;
+border:none;
+margin-top: 15px;
+
+
+}
+
