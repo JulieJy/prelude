@@ -13,6 +13,16 @@
   background: linear-gradient(167.48deg, #F6A362 5.69%, #EA934F 96.53%);
   height: 100vh;
   width: 100%;
+  h1 {
+    text-align: left !important;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 41px;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    color: #F2F2F2;
+  }
 }
 
 .card-game {
