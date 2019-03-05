@@ -1,5 +1,5 @@
 function reRenderParticipantsList() {
-  let html = "<%= j render 'shared/participants-avatar', current_participant: @participant, event: @event %>";
+  let html = "<%= j render 'shared/participants-avatar', event: @event %>";
   document.querySelector(".participants").innerHTML = html;
 }
 
