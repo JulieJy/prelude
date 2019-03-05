@@ -8,10 +8,14 @@
       <h2 class="title_sign_up">Bonjour !</h2>
       </div>
 
+         <%= link_to "Sign in with Facebook", omniauth_authorize_path(:user, :facebook)%>
+
+
         <div class="btn_sign_up" id="btn_sign_up_facebook">
          <%= image_tag 'facebook_logo.png', class: "img_signin" %>
          <h3 id="btn_h3_facebook">Continuer avec Facebook</h3>
         </div>
+
         <div class="btn_sign_up btn_sign_up_main">
           <%= image_tag 'google_logo.png', class: "img_signin" %>
           <h3 id="btn_h3_google">Continuer avec Google</h3>

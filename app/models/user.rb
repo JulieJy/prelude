@@ -3,8 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   mount_uploader :photo, PhotoUploader
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-  devise :omniauthable, omniauth_providers: [:facebook]
+         :recoverable, :rememberable, :validatable,
+         :omniauthable, omniauth_providers: [:facebook]
 
   has_many :libraries
   has_many :games, through: :libraries
@@ -14,7 +14,7 @@ class User < ApplicationRecord
   has_many :attendee_events, -> {where(participants: {role: 'attendee'})} , through: :participants, source: :event
 
 
-  validates :first_name, :last_name, :address, presence: true
+  validates :first_name, :last_name, presence: true
   phony_normalize :phone_number, default_country_code: 'FR'
   validates :phone_number, phony_plausible: true
 
@@ -24,7 +24,7 @@ class User < ApplicationRecord
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.slice(:provider, :uid)
-    user_params.merge! auth.info.slice(:email, :first_name, :last_name)
+    user_params.merge! auth.info.slice("email", "first_name", "last_name")
     user_params[:facebook_picture_url] = auth.info.image
     user_params[:token] = auth.credentials.token
     user_params[:token_expiry] = Time.at(auth.credentials.expires_at)
