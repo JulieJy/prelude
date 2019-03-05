@@ -1,7 +1,7 @@
 <div class="suggestions-body">
   <div class="cont-link">
-    <%= link_to root_path do %>
-      <%= image_tag 'left-arrow_white.png', class: "left-arrow" %>
+    <%= link_to games_search_path do %>
+      <%= image_tag 'left-arrow.png', class: "left-arrow" %>
     <% end %>
     <h1 class="title_sign_up">Suggestions</h1>
   </div>
@@ -11,16 +11,27 @@
       <span id="smiley">;)</span>
     </div>
   <% else %>
-    <% @games.each do |game| %>
-      <%= link_to game_path(game["id"]) do %>
-      <div class="card-game">
-        <img src="<%= game.picture %>">
-        <div class="card-game-infos">
-          <h2><%= game.name %></h2>
-          <p><%= game.category %> - De <%= game.nb_player_min %> à <%= game.nb_player_max %> joueurs</p>
+  <p>Parmi les 101 jeux disponibles, <br>nous te proposons les 3 suivants :</p>
+    <div class="cont-suggestions">
+      <% @games.each do |game| %>
+        <%= link_to game_path(game["id"]) do %>
+        <div class="card-game">
+          <div class="game-pic" style="background-image: url(<%= game.picture %>)">
+
+          </div>
+<!--           <img src="<%= game.picture %>"> -->
+          <div class="card-game-infos">
+            <h2><%= game.name %></h2>
+            <p><i class="fas fa-tag"></i>   <%= game.category %>
+              <br>
+              <i class="fas fa-clock"></i>   <%= time_for2(game).capitalize %>
+              <br>
+            <i class="fas fa-users"></i>   De  <%= game.nb_player_min %> à <%= game.nb_player_max %> joueurs</p>
+          </div>
         </div>
-      </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   <% end %>
+  <button class="btn_all" onClick="window.location.reload()">J'en veux 3 autres !</button>
 </div>

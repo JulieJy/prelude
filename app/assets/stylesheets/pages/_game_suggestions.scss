@@ -10,45 +10,82 @@
 }
 
 .suggestions-body {
-  background: linear-gradient(167.48deg, #F6A362 5.69%, #EA934F 96.53%);
-  height: 100vh;
-  width: 100%;
+  background: linear-gradient(326.86deg, #FFFFFF -11.31%, rgba(247, 241, 241, 0.88) 75.2%);
+  text-align : center;
+  height : 100%;
+  margin-right: auto;
+  margin-left: auto;
+  height: fit-content;
   h1 {
     text-align: left !important;
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
     line-height: 41px;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0.01em;
-    color: #F2F2F2;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  h2 {
+    text-align: center;
+  }
+  .btn_all {
+    margin: 15px auto;
+    &:active {
+      background-color: #f6a362!important;
+    }
+  }
+
+  p {
+    color: rgba(0, 0, 0, 0.76);
+    text-align: left;
+    margin-top: 10px;
+    font-size: 12px;
+    margin: 0 18px;
+    padding-top: 10px;
+  }
+  i {
+    margin-right: 5px;
+  }
+
+  .fas {
+    color: #f6a362;
+
   }
 }
 
 .card-game {
   overflow: hidden;
-  border-radius: 30px;
-  height: 120px;
-  width: 80%;
+  border-radius: 10px;
+  height: 130px;
+  width: 90%;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  margin: 55px auto;
+  margin: 10px auto;
+  transition: all 0.1s;
+  &:active {
+    opacity: 0.9;
+    box-shadow: none;
+    transform: scale(0.95);
+  }
 }
 
 .card-game img {
-  height: 100%;
+  height: 200%;
   width: 120px;
   object-fit: cover;
 }
 
 .card-game h2 {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
   margin: 0;
+  width: 100%;
   font-family: Open Sans;
   color: rgba(0, 0, 0, 0.9);
+  margin: 10px 0;
 }
 
 .card-game a {
@@ -61,13 +98,25 @@
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 15px;
+  margin-left: 21px;
+  padding-left: 3px;
+  padding-top: 4px;
+  margin: 8px auto;
   font-family: Open Sans;
   color: rgba(0, 0, 0, 0.9);
+  text-align: left;
+  position: absolute;
+  bottom: 5px;
 }
 
 .card-game .card-game-infos {
-  padding: 16px;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  width: inherit;
+  height: inherit;
+  position: relative;
 }
 
 .no-game {
@@ -85,4 +134,16 @@
 #smiley {
   color: white;
   font-size: 200px;
+}
+
+.cont-suggestions {
+  margin-top : 40px;
+}
+
+.game-pic {
+  width: 190px;
+  height: 320px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
