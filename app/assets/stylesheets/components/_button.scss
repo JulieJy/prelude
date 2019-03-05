@@ -13,9 +13,20 @@
   line-height: normal;
   font-size: 14px;
   text-align: center;
-  transition: opacity 0.3s ease;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+  position: relative;
+
   &:active {
     background : #F05D59;
     color : white;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+  }
+
+  &:focus {
+    outline: none;
   }
 }

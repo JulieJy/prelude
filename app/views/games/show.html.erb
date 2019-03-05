@@ -5,25 +5,29 @@
 
        <div class="game-box">
 
-        <div class="head-show">
-          <%= link_to image_tag 'left-arrow_white.png', class: "left-arrow" %>
-           <%= link_to "Retour a la recherche", :back , class: "retour"%>
+        <div class="cont-link">
+          <%= link_to request.referrer do %>
+            <%=image_tag 'left-arrow.png', class: "left-arrow" %>
+          <% end %>
+          <h1 class="title_sign_up">Détails du jeu</h1>
         </div>
 
 
-       <h1><%= @game.name%></h1>
+       <h2><%= @game.name%></h2>
 
        <div class="game-img ">
            <img src="<%= @game.picture %>" alt="<%= @game.name %>">
        </div>
 
-        <div class="game-description">
-           <p><span>Nombre de joueurs </span>De <%= @game.nb_player_min %> à <%= @game.nb_player_max %> joueurs</p>
-           <p><span>Temps de jeu </span> <%= time_for(@game) %></p>
-           <p><span>Category </span> <%= @game.category %></p>
-           <p class= "game-text"><span>Description </span><%= @game.description%></p>
+           <div class="game-stickers"><i class="fas fa-users"></i><p>De <%= @game.nb_player_min %> à <%= @game.nb_player_max %> joueurs</p></div>
+           <div class="game-stickers"><i class="fas fa-clock"></i><p> <%= time_for(@game).capitalize %></p></div>
+           <div class="game-stickers"><i class="fas fa-tag"></i><p> <%= @game.category %></p></div>
+        <div class="cont-desc">
+          <span>Description </span>
+          <div class="game-description">
+             <p class= "game-text"><%= @game.description%></p>
+          </div>
         </div>
-
        </div>
      </div>
    </div>
