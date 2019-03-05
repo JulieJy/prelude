@@ -1,25 +1,17 @@
 
 <div class="participants-list">
-<ul>
-  <% accepted_participants = event.participants.where(status: true) %>
-  <% accepted_participants.each do |participant| %>
-    <li>
-      <img src="<%=participant.user.photo %>" alt="Avatar" class="avatar">
-    </li>
-  <% end %>
+  <ul>
+    <% accepted_participants = event.participants.where(status: true) %>
+    <% accepted_participants.each do |participant| %>
+      <li>
+        <img src="<%=participant.user.photo %>" alt="Avatar" class="avatar">
+      </li>
+    <% end %>
 
-  <% (event.nb_person - accepted_participants.count).times do  %>
-    <li>
-      <img src="https://t3.ftcdn.net/jpg/01/04/10/10/240_F_104101070_wbEDt3CmlzqnPbdmOlVCL7Q7yu9mCduz.jpg" alt="Avatar" class="avatar" id="avatar2">
-    </li>
-  <% end %>
-</ul>
+    <% (event.nb_person - accepted_participants.count).times do  %>
+      <li>
+        <img src="https://t3.ftcdn.net/jpg/01/04/10/10/240_F_104101070_wbEDt3CmlzqnPbdmOlVCL7Q7yu9mCduz.jpg" alt="Avatar" class="avatar" id="avatar2">
+      </li>
+    <% end %>
+  </ul>
 </div>
-
-<%=  %>
-
-<% if current_user != event.creator %>
-  <h5>Vous y allez?</h5>
-  <%= link_to "",  accept_participant_path(current_participant), :method=> :patch, class:"fas fa-check btn-access", remote: true %>
-  <%= link_to "", decline_participant_path(current_participant), :method=> :patch, class:"fas fa-times btn-decline", remote: true %>
-<% end %>

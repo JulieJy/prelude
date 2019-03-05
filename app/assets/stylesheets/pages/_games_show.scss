@@ -76,13 +76,13 @@
 }
 
 .game-stickers {
-  padding: 1px 15px;
-  color:#000;
-  margin: 5px auto;
-  display: table;
+  color: #000;
+  display: grid;
+  grid-template-columns: 50px auto;
+  align-items: center;
+  justify-items: center;
   p {
     box-shadow: 2px 13px 30px rgba(0, 0, 0, 0.2);
-    margin-right: 0;
     padding: 1px 15px;
     border-radius: 10px;
     background-color: #fff;
@@ -91,12 +91,15 @@
     vertical-align: middle;
     width: 238px;
     font-size: 14px;
+    margin: 5px;
   }
   .fas {
-    padding-right: 10px;
     display: table-cell;
     vertical-align: middle;
     color: #f6a362;
+  }
+  i {
+    justify-self: end;
   }
 }
 

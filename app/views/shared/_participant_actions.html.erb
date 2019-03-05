@@ -1,0 +1,3 @@
+<h5>Vous y allez?</h5>
+<%= link_to "",  accept_participant_path(current_participant), :method=> :patch, class:"fas fa-check btn-access", remote: true %>
+<%= link_to "", decline_participant_path(current_participant), :method=> :patch, class:"fas fa-times btn-decline", remote: true %>

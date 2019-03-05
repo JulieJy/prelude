@@ -1,30 +1,36 @@
-
-<div class="show-container">
-<div class="container ">
+<div class="container show-container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 ">
+    <div class="col-sx-12 col-md-4 col-md-offset-4">
+
+    <div class="cont-link">
+      <%= link_to root_path do %>
+        <%=image_tag 'left-arrow.png', class: "left-arrow" %>
+      <% end %>
+      <h1 class="title_sign_up">Détails de l'évènement</h1>
+    </div>
 
 
       <div class="box-text">
-        <h3>Soirée Jeux de  <span> <%= @event.creator.first_name %>
-         <%= @event.creator.last_name %></h3></span>
+        <h3>Soirée Jeux de  <span> <%= @event.creator.first_name %></h3></span>
 
-
-       <p><i class="fa far fa-clock"></i><%= @event.date.strftime("%m/%d") %> <%= @event.time.strftime("at %I:%M%p") %></p>
-       <p><i class="fas fa-map-marker-alt"></i><%= @event.place %></p>
-       <p><i class="fas fa-user-alt"></i>Number of participants <%= @event.nb_person %></p>
+        <div class="game-stickers"><i class="fas fa-clock"></i><p> <%= @event.date.strftime("%m/%d") %> <%= @event.time.strftime("à %I:%M%p") %></p></div>
+        <div class="game-stickers"><i class="fas fa-map-marker-alt"></i><p> <%= @event.place %></p></div>
+        <div class="game-stickers"><i class="fas fa-users"></i><p><%= @event.nb_person %> participants</p></div>
       </div>
 
 
-      <h5 class="parti-title">Qui va participer</h5>
-       <div class="participants">
-        <%= render 'shared/participants-avatar', current_participant: @participant, event: @event %>
+      <h3 class="parti-title">Participants</h3>
+        <div class="participants">
+          <%= render 'shared/participants-avatar', event: @event %>
+        </div>
 
-      </div>
-
+        <% if current_user != @event.creator %>
+          <div class="participants">
+            <%= render 'shared/participant_actions', current_participant: @participant %>
+          </div>
+        <% end %>
     </div>
   </div>
-</div>
 
 
         <div
@@ -35,8 +41,13 @@
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 
-         </div>
+        </div>
 
-       <%= link_to t("demarrer", default: "Demarrer la soirée"), games_search_path, class: "btn-demarrer text-center center-block" %>
-
+  <div class="row">
+      <div class="col-sx-12 col-md-4 col-md-offset-4">
+        <% if current_user == @event.creator %>
+          <button class="btn_all"><%= link_to t("demarrer", default: "Demarrer la soirée"), games_search_path%></button>
+        <% end %>
+      </div>
+    </div>
 </div>

@@ -9,7 +9,7 @@ class EventsController < ApplicationController
     @markers = [{
       lng: @event.coordinates[:longitude],
       lat: @event.coordinates[:latitude],
-      image_url: helpers.asset_url('https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/location-24-512.png')
+      image_url: helpers.asset_url('https://i.imgur.com/BsUZoRX.png')
     }]
   end
 
