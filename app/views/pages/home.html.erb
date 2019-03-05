@@ -5,9 +5,7 @@
   <% end %>
 
 
-  <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
-
-   <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "avatar_home", "data-toggle" => "dropdown" %>
+   <%= image_tag current_user.photo.url, class: "avatar dropdown-toggle", id: "avatar_home", "data-toggle" => "dropdown" %>
 
     <%= image_tag "prelude_negatif.png", alt: "prelude logo", class:"prelude_logo_login" %>
     <div class="link_box">
