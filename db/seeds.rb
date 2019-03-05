@@ -32,8 +32,10 @@ user1 = User.create!(
   email: "pedro@pedro.com",
   address: "20 rue des capucins, Lyon",
   phone_number:"555-345-322",
-  password: "secret"
+  password: "secret",
+  photo: File.open("#{Rails.root}/app/assets/images/pedro.png"),
   )
+
 
 user2 = User.create!(
   first_name: "Julie",
@@ -41,7 +43,9 @@ user2 = User.create!(
   email: "julie@julie.com",
   address: "20 Rue de brest, Lyon",
   phone_number:"555-345-322",
-  password: "secret")
+  password: "secret",
+  photo: File.open("#{Rails.root}/app/assets/images/julie.png"),
+)
 
 
 user3 = User.create!(
@@ -50,7 +54,9 @@ user3 = User.create!(
   email: "hugo@hugo.com",
   address: "Place Bellecour, Lyon",
   phone_number:"555-345-322",
-  password: "secret")
+  password: "secret",
+  photo: File.open("#{Rails.root}/app/assets/images/hugo.png"),
+)
 
 
 
@@ -60,7 +66,9 @@ user4 = User.create!(
   email: "david@david.com",
   address: "20 Rue Childebert, Lyon",
   phone_number:"555-345-322",
-  password: "secret")
+  password: "secret",
+  photo: File.open("#{Rails.root}/app/assets/images/david.png"),
+)
 
 bar1 = Bar.create!(
   name: "Suberry",
