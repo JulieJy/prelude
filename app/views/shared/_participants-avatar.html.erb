@@ -1,3 +1,5 @@
+
+<div class="participants-list">
 <ul>
   <% accepted_participants = event.participants.where(status: true) %>
   <% accepted_participants.each do |participant| %>
@@ -12,10 +14,12 @@
     </li>
   <% end %>
 </ul>
+</div>
 
 <%=  %>
 
 <% if current_user != event.creator %>
-  <%= link_to "accept",  accept_participant_path(current_participant), :method=> :patch, class:"btn btn-success", remote: true %>
-  <%= link_to "decline", decline_participant_path(current_participant), :method=> :patch, class:"btn btn-danger", remote: true %>
+  <h5>Vous y allez?</h5>
+  <%= link_to "",  accept_participant_path(current_participant), :method=> :patch, class:"fas fa-check btn-access", remote: true %>
+  <%= link_to "", decline_participant_path(current_participant), :method=> :patch, class:"fas fa-times btn-decline", remote: true %>
 <% end %>

@@ -1,18 +1,77 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<div class="profile_body">
 
-<%= @user.first_name %>
-<%= @user.last_name %>
-<%= @user.address %>
-<%= @user.email %>
-<%= @user.phone_number %>
+  <div class="container">
+    <%= link_to root_path do %>
+      <div class="title-align">
+        <%= image_tag 'left-arrow.png', class: "left-arrow" %>
+        <h2 class="title_sign_up">Accueil</h2>
+      </div>
+    <% end %>
+  </div>
 
-<h3>My Games</h3>
-<% @user.games.each do |game| %>
-  <p><%= game.name %></p>
-<% end %>
+  <div class="content_wht_form">
+    <div class="user_card">
+      <div class="profile_image">
+        <%= cl_image_tag(@user.photo, alt: "profile_picture", id: "avatar_profile") %>
+      </div>
+      <div class="user_info">
+        <div class="name">
+          <%= @user.first_name %>
+          <%= @user.last_name %>
+        </div>
+        <div class="address">
+          <i class="fas fa-map-marker-alt">&nbsp;</i><%= @user.address %>
+        </div>
+        <div class="email">
+          <i class="fas fa-at"></i>&nbsp;<%= @user.email %>
+        </div>
+        <div class="phone">
+          <i class="fas fa-phone">&nbsp;</i><%= @user.phone_number %>
+        </div>
+      </div>
+    </div>
 
-<%= simple_form_for @library do |f| %>
-  <%= f.input :game_id, collection: Game.order(:name) %>
-  <%= f.submit "add a game", class: "btn btn-primary" %>
-<% end %>
+
+    <div class="container">
+      <hr>
+      <h3>Mes soirées</h3>
+      <div class="ml scroller">
+        <% @user.creator_events.order(date: :desc).each do |event| %>
+          <p>
+            <%= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
+          </p>
+        <% end %>
+      </div>
+
+      <hr>
+
+      <h3>Mes invitations</h3>
+      <div class="ml scroller">
+        <% @user.attendee_events.each do |event| %>
+          <p>
+            <%= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
+          </p>
+        <% end %>
+      </div>
+
+      <hr>
+      <h3>Ma bibliothèque de jeux</h3>
+      <div class="ml scroller">
+        <% @user.games.order(name: :asc).each do |game| %>
+          <p><%= game.name %></p>
+        <% end %>
+      </div>
+
+      <hr>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <%= simple_form_for @library do |f| %>
+      <%= f.input :game_id, collection: Game.order(:name), input_html: { class: 'choices' }, label: false %>
+      <%= f.submit "Ajouter un jeu", class: "btn_all" %>
+    <% end %>
+  </div>
+</div>
+

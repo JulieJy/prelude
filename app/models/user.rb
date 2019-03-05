@@ -9,6 +9,9 @@ class User < ApplicationRecord
   has_many :games, through: :libraries
   has_many :participants
   has_many :events, through: :participants
+  has_many :creator_events, -> {where(participants: {role: 'organizer'})} , through: :participants, source: :event
+  has_many :attendee_events, -> {where(participants: {role: 'attendee'})} , through: :participants, source: :event
+
 
   validates :first_name, :last_name, :address, presence: true
   phony_normalize :phone_number, default_country_code: 'FR'

@@ -50,7 +50,7 @@
   line-height: normal;
   font-size: 14px;
 
-  color: #252A31;
+  color: #252A31 !important;
 }
 
 #sign_in {
@@ -63,6 +63,7 @@
   font-size: 14px;
   text-decoration: none;
   color: white;
+  letter-spacing: 0.5px;
 }
 
 .link_box {
@@ -73,7 +74,7 @@
   width: 100%;
   position: absolute;
   // bottom: 0%;
-  height: 74%;
+  height: 60%;
   border-radius: 50px 50px 0px 0px;
   align-items: center;
   // padding-top: 15%;
@@ -86,7 +87,7 @@
   font-family: Open Sans;
   color: white;
   text-decoration: none;
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 20px 15px;
 }
 
@@ -102,7 +103,18 @@
   background: #FAD878;
 }
 
-#avatar {
-  height: 100px;
+#avatar_home {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  height: 18px;
   border-radius: 50%;
+}
+
+#logout {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  opacity: 0.9;
 }
