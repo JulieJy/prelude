@@ -5,7 +5,7 @@ Participant.destroy_all
 p 'I destroy all games'
 Game.delete_all
 p 'I destroy all users'
-
+User.delete_all
 p 'I destroy all bars'
 Bar.destroy_all
 
