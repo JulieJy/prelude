@@ -35,33 +35,32 @@ user1 = User.create!(
   password: "secret"
   )
 
-
-# user2 = User.create!(
-#   first_name: "Julie",
-#   last_name: "Jaumary",
-#   email: "julie@julie.com",
-#   address: "20 Rue de brest, Lyon",
-#   phone_number:"555-345-322",
-#   password: "secret")
-
-
-# user3 = User.create!(
-#   first_name: "Hugo",
-#   last_name: "Plé",
-#   email: "hugo@hugo.com",
-#   address: "Place Bellecour, Lyon",
-#   phone_number:"555-345-322",
-#   password: "secret")
+user2 = User.create!(
+  first_name: "Julie",
+  last_name: "Jaumary",
+  email: "julie@julie.com",
+  address: "20 Rue de brest, Lyon",
+  phone_number:"555-345-322",
+  password: "secret")
 
 
+user3 = User.create!(
+  first_name: "Hugo",
+  last_name: "Plé",
+  email: "hugo@hugo.com",
+  address: "Place Bellecour, Lyon",
+  phone_number:"555-345-322",
+  password: "secret")
 
-# user4 = User.create!(
-#   first_name: "David",
-#   last_name: "Habault",
-#   email: "david@david.com",
-#   address: "20 Rue Childebert, Lyon",
-#   phone_number:"555-345-322",
-#   password: "secret")
+
+
+user4 = User.create!(
+  first_name: "David",
+  last_name: "Habault",
+  email: "david@david.com",
+  address: "20 Rue Childebert, Lyon",
+  phone_number:"555-345-322",
+  password: "secret")
 
 bar1 = Bar.create!(
   name: "Suberry",
