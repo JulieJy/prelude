@@ -4,9 +4,10 @@
     <i class="fas fa-sign-out-alt" id="logout"></i>
   <% end %>
 
-  <%= cl_image_tag(current_user.photo, alt: "profile_picture", id: "avatar_home") %>
+
   <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
-<%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+
+   <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "avatar_home", "data-toggle" => "dropdown" %>
 
     <%= image_tag "prelude_negatif.png", alt: "prelude logo", class:"prelude_logo_login" %>
     <div class="link_box">
