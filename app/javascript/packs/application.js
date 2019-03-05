@@ -11,6 +11,7 @@ import 'flatpickr/dist/flatpickr.css';
 import choices from "choices.js";
 import "choices.js/public/assets/styles/choices.css";
 
+
 initMapbox();
 flatpickr('.date-calendar', {disableMobile: true});
 flatpickr('.time-calendar', {
@@ -20,4 +21,7 @@ flatpickr('.time-calendar', {
     dateFormat: "H:i",
 });
 
-new choices('.choices');
+const elements = document.querySelectorAll('.choices');
+elements.forEach((element) => {
+  new choices(element);
+});

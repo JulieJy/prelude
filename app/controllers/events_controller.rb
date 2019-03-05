@@ -22,11 +22,14 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @user = User.find_by(email: params[:event][:invitation_emails])
+    participants = params[:event][:invitation_emails].reject(&:empty?)
     # @user.role = organizer
     if @event.save
-
       Participant.create!(event: @event, user: current_user, role: 'organizer', status: true)
-      Participant.create!(event: @event, user: @user, role: 'attendee')
+      participants.each do |participant|
+        user = User.find_by(email: participant)
+        Participant.create!(event: @event, user: user, role: 'attendee')
+      end
       redirect_to event_path(@event)
     else
       @bars = Bar.all
