@@ -1,5 +1,5 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="node_modules/select2/dist/css/select2.css">
 
 
 <div class="cont-event-search">
@@ -42,7 +42,7 @@
         </div>
 
 
-        <%= f.input :invitation_emails, collection: User.pluck(:email), input_html:{class: "span8 ac-select2", id:"event-btn"},:prompt => 'Ajouter des joueurs', label: false %>
+        <%= f.input :invitation_emails, collection: User.pluck(:email), input_html:{class: "span8 ac-select2 select2", id:"event-btn"},:prompt => 'Ajouter des joueurs', label: false , multiple: true %>
 
         <%= f.input :nb_person, input_html: { min: '0', step: 'any' }, input_html:{class: "form-control", id:"event-btn"}, placeholder: "Nombre de joueurs", label: false  %>
 
