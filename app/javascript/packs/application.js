@@ -21,4 +21,7 @@ flatpickr('.time-calendar', {
     dateFormat: "H:i",
 });
 
-new choices('.choices');
+const elements = document.querySelectorAll('.choices');
+elements.forEach((element) => {
+  new choices(element);
+});

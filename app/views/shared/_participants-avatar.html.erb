@@ -4,7 +4,7 @@
   <% accepted_participants = event.participants.where(status: true) %>
   <% accepted_participants.each do |participant| %>
     <li>
-      <img src="<%=participant.user.photo %>" alt="Avatar" class="avatar">
+      <img src="<%=participant.user.photo_avatar_url %>" alt="Avatar" class="avatar">
     </li>
   <% end %>
 
