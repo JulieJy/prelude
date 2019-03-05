@@ -14,7 +14,10 @@ gem 'cloudinary', '~> 1.9.1'
 gem "simple_calendar", "~> 2.0"
 gem "select2-rails"
 gem "geocoder"
-gem "font-awesome-rails"
+
+# gem "font-awesome-rails"
+gem 'omniauth-facebook'
+gem 'figaro'
 
 gem "rest-client"
 gem 'autoprefixer-rails'
