@@ -39,7 +39,14 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]  # Fake password for validation
       user.save
     end
-
     return user
+  end
+
+  def photo_avatar_url
+    if facebook_picture_url?
+      facebook_picture_url
+    else
+      photo.url
+    end
   end
 end
