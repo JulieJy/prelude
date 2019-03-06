@@ -27,6 +27,12 @@
     // align-items: space-between;
   }
 
+  .collection_radio_buttons {
+    &:first-child {
+      color: yellow;
+    }
+  }
+
   form {
     background: linear-gradient(167.48deg, #F6A362 5.69%, #EA934F 96.53%);
     height: fit-content;
