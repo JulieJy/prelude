@@ -22,13 +22,25 @@
            <div class="game-stickers"><i class="fas fa-users"></i><p>De <%= @game.nb_player_min %> à <%= @game.nb_player_max %> joueurs</p></div>
            <div class="game-stickers"><i class="fas fa-clock"></i><p> <%= time_for(@game).capitalize %></p></div>
            <div class="game-stickers"><i class="fas fa-tag"></i><p> <%= @game.category %></p></div>
-        <div class="cont-desc">
+
+
+  <div class="game-descrip">
+      <button type="button" class="btn cont-desc" data-toggle="collapse" data-target="#demo">Description</button>
+      <div id="demo" class="collapse">
+      <p class= "game-text game-description"><%= @game.description%></p>
+      </div>
+  </div>
+
+       <!--  <div class="cont-desc">
           <span>Description </span>
           <div class="game-description">
              <p class= "game-text"><%= @game.description%></p>
           </div>
         </div>
+ -->
        </div>
      </div>
    </div>
 </div>
+
+
