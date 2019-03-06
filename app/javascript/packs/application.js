@@ -8,17 +8,21 @@ import "./players"
 import "./search_duration"
 import flatpickr from "flatpickr";
 import 'flatpickr/dist/flatpickr.css';
+import { French } from "flatpickr/dist/l10n/fr.js"
+
 import choices from "choices.js";
 import "choices.js/public/assets/styles/choices.css";
 
 
 initMapbox();
-flatpickr('.date-calendar', {disableMobile: true});
+flatpickr('.date-calendar', {disableMobile: true, locale: French, dateFormat: "d-m-Y",});
 flatpickr('.time-calendar', {
     disableMobile: true,
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
+    locale: French,
+    time_24hr: true
 });
 
 const elements = document.querySelectorAll('.choices');
