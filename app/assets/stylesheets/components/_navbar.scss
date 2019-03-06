@@ -19,9 +19,12 @@
 .navbar-prelude .fas {
   font-size: 24px;
   color: black;
-  opacity: 0.6;
+  opacity: 0.3;
 
-  &:active {
-    opacity: 1;
+  &:active, &.active {
+  background: -webkit-linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
   }
 }

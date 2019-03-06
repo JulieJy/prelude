@@ -1,19 +1,19 @@
 <% if user_signed_in? %>
   <div class="navbar-prelude">
     <%= link_to root_path do %>
-      <i class="fas fa-home" id="nav_logo"></i>
+      <i class="fas fa-home <%= "active" if params[:controller] == "pages" %>" id="nav_logo"></i>
     <% end %>
 
     <%= link_to new_event_path do %>
-      <i class="fas fa-calendar-plus" id="nav_logo"></i>
+      <i class="fas fa-calendar-plus <%= "active" if params[:controller] == "events" %>" id="nav_logo"></i>
     <% end %>
 
     <%= link_to games_search_path do %>
-      <i class="fas fa-dice" id="nav_logo"></i>
+      <i class="fas fa-dice <%= "active" if params[:controller] == "games" %>" id="nav_logo"></i>
     <% end %>
 
     <%= link_to user_path(current_user) do %>
-      <i class="fas fa-user" id="nav_logo"></i>
+      <i class="fas fa-user <%= "active" if params[:controller] == "users" %>" id="nav_logo"></i>
     <% end %>
   </div>
 <% end %>
