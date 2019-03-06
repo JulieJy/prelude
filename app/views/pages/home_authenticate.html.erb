@@ -1,14 +1,20 @@
 <div class="home_body">
-  <h1>Bienvenue <%= "#{current_user.first_name}" %>,</h1>
+  <h1>Bienvenue <%= "#{current_user.first_name}" %> !</h1>
 
   <div class="container">
-    <hr>
+
+<%= link_to new_event_path do  %>
+  <button class="btn_all">Créer une soirée jeux</button>
+  <% end %>
+
     <h3>Mes soirées</h3>
     <div class="scroller">
       <% current_user.creator_events.order(date: :desc).last(3).each do |event| %>
-        <p>
-          <%= link_to "#{event.date} | #{event.creator.address}", event_path(event) %>
-        </p>
+        <div class="invit-box">
+          <p>
+            <%= link_to "#{event.date} | #{event.creator.address}", event_path(event) %>
+          </p>
+        </div>
       <% end %>
     </div>
 
@@ -17,9 +23,11 @@
     <h3>Mes invitations</h3>
     <div class="scroller">
       <% current_user.attendee_events.order(date: :desc).last(3).each do |event| %>
+        <div class="invit-box">
         <p>
           <%= link_to "#{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
         </p>
+        </div>
       <% end %>
     </div>
 </div>

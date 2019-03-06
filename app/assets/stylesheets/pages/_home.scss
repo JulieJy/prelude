@@ -1,4 +1,10 @@
 // Specific CSS for your home-page
+
+
+.home_body.unauthenticated {
+  background: linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+}
+
 .home_body {
   flex-direction: column;
   text-align: center;
@@ -6,27 +12,57 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+  background: linear-gradient(326.86deg, #FFFFFF -11.31%, rgba(247, 241, 241, 0.88) 75.2%);
+
   display: flex;
 
+  .btn_all {
+  background: linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+  color: white;
+  margin: 20px auto;
+  }
+
   h1 {
-    color: white;
-    font-size: 18px;
-    margin-top: 25px;
-    opacity: 0.9;
+    font-family: Open Sans;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     font-size: 25px;
+     letter-spacing: -0.458235px;
+     color: rgba(0, 0, 0, 0.75);
+     text-align:center;
+     width: 300px;
+     margin-top: 50px;
+  }
+
+  .invit-box {
+    background-color: white;
+    box-shadow: 2px 13px 30px rgba(0, 0, 0, 0.2);
+    padding: 1px 15px;
+    border-radius: 10px;
+    line-height: 30px;
+    vertical-align: middle;
+    font-size: 14px;
+    margin: 5px;
+    p {
+      margin: 0;
+    }
+  }
+
+  .scroller {
+    padding: 20px;
   }
 
   h3 {
-    color: white;
-    font-size: 16px;
-    font-style: italic;
-    opacity: 0.9;
-    margin-top: 15px;
-  }
+      font-weight: 700;
+      text-shadow: none;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 20px;
+    }
 
   a {
     font-size: 14px;
-    color: white;
+    color: rgba(0, 0, 0, 0.76);
     opacity: 0.9,
   }
 
