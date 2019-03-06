@@ -1,13 +1,15 @@
 <div class="profile_body">
 
-  <div class="container">
-    <%= link_to root_path do %>
-      <div class="title-align">
-        <%= image_tag 'left-arrow.png', class: "left-arrow" %>
-        <h2 class="title_sign_up">Accueil</h2>
-      </div>
+  <div class="cont-link">
+    <%= link_to games_search_path do %>
+      <%= image_tag 'left-arrow.png', class: "left-arrow" %>
     <% end %>
+    <h1 class="title_sign_up">Mon profil</h1>
+   <%= link_to destroy_user_session_path, method: :delete do %>
+    <i class="fas fa-sign-out-alt" id="logout"></i>
+  <% end %>
   </div>
+
 
   <div class="content_wht_form">
     <div class="user_card">
@@ -15,30 +17,56 @@
         <%= cl_image_tag(@user.photo_avatar_url, alt: "profile_picture", id: "avatar_profile") %>
       </div>
       <div class="user_info">
-        <div class="name">
-          <%= @user.first_name %>
-          <%= @user.last_name %>
+        <div class="game-stickers name">
+          <h2> <%= @user.first_name %>
+          <%= @user.last_name %> </h2>
         </div>
-        <div class="address">
-          <i class="fas fa-map-marker-alt">&nbsp;</i><%= @user.address %>
+        <div class="game-stickers address">
+          <i class="fas fa-map-marker-alt"></i>
+          <p> <%= @user.address %></p>
         </div>
-        <div class="email">
-          <i class="fas fa-at"></i>&nbsp;<%= @user.email %>
+        <div class="game-stickers email">
+          <i class="fas fa-at"></i><p><%= @user.email %></p>
         </div>
-        <div class="phone">
-          <i class="fas fa-phone">&nbsp;</i><%= @user.phone_number %>
+        <div class="game-stickers phone">
+          <i class="fas fa-phone"></i><p><%= @user.phone_number %></p>
         </div>
       </div>
     </div>
 
 
-    <div class="container">
+
+      <div class="games">
+      <h3>Ma bibliothèque de jeux</h3>
+        <div class="ml scroller">
+          <% @user.games.order(name: :asc).each do |game| %>
+          <div class="game_biblio">
+            <p><%= game.name %></p>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+  <h3>Ajouter un jeu</h3>
+  <div class="cont-add-game">
+    <%= simple_form_for @library do |f| %>
+      <%= f.input :game_id, collection: Game.order(:name), input_html: { class: 'choices' }, label: false, html: { class: 'form-inline' }%>
+      <%= f.submit "+", class: "btn_plus", html: { class: 'form-inline' } %>
+    <% end %>
+  </div>
+  </div>
+
+</div>
+
+   <!--  <div class="container">
       <hr>
       <h3>Mes soirées</h3>
       <div class="ml scroller">
         <% @user.creator_events.order(date: :desc).each do |event| %>
           <p>
-            <%= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
+            <%#= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
           </p>
         <% end %>
       </div>
@@ -49,29 +77,9 @@
       <div class="ml scroller">
         <% @user.attendee_events.each do |event| %>
           <p>
-            <%= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
+            <%#= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
           </p>
         <% end %>
       </div>
 
-      <hr>
-      <h3>Ma bibliothèque de jeux</h3>
-      <div class="ml scroller">
-        <% @user.games.order(name: :asc).each do |game| %>
-          <p><%= game.name %></p>
-        <% end %>
-      </div>
-
-      <hr>
-    </div>
-  </div>
-
-
-  <div class="container">
-    <%= simple_form_for @library do |f| %>
-      <%= f.input :game_id, collection: Game.order(:name), input_html: { class: 'choices' }, label: false %>
-      <%= f.submit "Ajouter un jeu", class: "btn_all" %>
-    <% end %>
-  </div>
-</div>
-
+      <hr> -->
