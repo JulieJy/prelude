@@ -6,8 +6,8 @@ if (btnminus) {
   btnminus.addEventListener('click', (event) => {
     event.preventDefault();
     let oldValue = Number.parseInt(nb.value);
-    if (nb.value <= 1) {
-      nb.value = 1;
+    if (nb.value <= 2) {
+      nb.value = 2;
     } else {
       nb.value = oldValue - 1;
     }
