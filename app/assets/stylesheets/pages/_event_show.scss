@@ -32,7 +32,6 @@ body{
     margin: auto;
     margin-bottom: 10px;
     display: flex;
-    text-align: center;
     padding-top: 14px;
   }
 
@@ -119,11 +118,11 @@ body{
 }
 
 
-.participants-list{
- position: relative;
- text-align: center;
- display: flex;
- justify-content: center;
+.participants-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
 }
 
 .avatar {
