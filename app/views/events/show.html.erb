@@ -14,7 +14,7 @@
         <h3>Soirée Jeux de  <span> <%= @event.creator.first_name %></h3></span>
 
         <div class="game-stickers"><i class="fas fa-clock"></i><p> <%= @event.date.strftime("%m/%d") %> <%= @event.time.strftime("à %I:%M%p") %></p></div>
-        <div class="game-stickers"><i class="fas fa-map-marker-alt"></i><p> <%= @event.place %></p></div>
+        <div class="game-stickers"><i class="fas fa-map-marker-alt"></i><p><%= @event.address %></p></div>
         <div class="game-stickers"><i class="fas fa-users"></i><p><%= @event.nb_person %> participants</p></div>
       </div>
 
