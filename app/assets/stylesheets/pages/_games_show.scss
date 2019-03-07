@@ -71,30 +71,8 @@
    }
 }
 
-.game-description{
-  width: 100%;
-}
-
 .cont-desc {
-  position:relative;
-  left:30%;
   margin-top: 20px;
-  color:#fff;
-  background-color:#f6a362;
-  border: none;
-  opacity: 1;
-  border-radius:10px;
-    &:active{
-      color:#fff;
-      opacity: .9;
-       background-color:#f6a362;
-    }
-    &:hover{
-      color:#fff;
-      opacity: .9;
-      background-color:#f6a362;
-    }
-
 }
 
 .game-stickers {
