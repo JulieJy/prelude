@@ -36,7 +36,7 @@
 
 
             <div class="dropdown_address">
-              <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]}, input_html:{id:"event-btn"}, :placeholder => 'Invitez', label: false   %>
+              <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]}, input_html:{id:"event-btn"}, :placeholder => 'Invitez', label: false, include_blank: false %>
             </div>
 
             <div class="cont-players">
@@ -53,7 +53,7 @@
               <div>
             <div class="friends">
               <%= f.label "Inviter mes amis" %>
-                <%= f.input :invitation_emails, collection: User.pluck(:email).reject {|email| email == current_user.email}, input_html:{class:" span8 choices", multiple: true, id:"event-btn" }, label: false %>
+                <%= f.input :invitation_emails, collection: User.all.reject {|u| u.email == current_user.email}.map { |u| ["#{u.first_name} #{u.last_name}", u.email] }, input_html:{class:" span8 choices", multiple: true, id:"event-btn" }, label: false %>
             </div>
           </div>
 

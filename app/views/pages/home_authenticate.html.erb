@@ -9,7 +9,7 @@
 
     <h3>Mes soirées</h3>
     <div class="scroller">
-      <% current_user.creator_events.order(date: :desc).last(3).each do |event| %>
+      <% @my_event.each do |event| %>
         <div class="invit-box">
           <p>
             <%= link_to "#{event.date} | #{event.place_to}", event_path(event) %>
@@ -22,10 +22,10 @@
 
     <h3>Mes invitations</h3>
     <div class="scroller">
-      <% current_user.attendee_events.order(date: :desc).last(3).each do |event| %>
+      <% @invitations.each do |event| %>
         <div class="invit-box">
         <p>
-          <%= link_to "#{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
+          <%= link_to "#{event.creator.first_name} | #{event.date} | #{event.place_to}", event_path(event) %>
         </p>
         </div>
       <% end %>
