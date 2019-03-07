@@ -17,6 +17,15 @@
   margin-left: auto;
   height: fit-content;
   margin-bottom: 60px;
+
+  .btn_all_purple {
+    margin-top: 50px;
+    .fas {
+      color: white;
+      font-size: 18px;
+    }
+  }
+
   h1 {
     text-align: left !important;
     font-family: Open Sans;
@@ -30,18 +39,12 @@
   h2 {
     text-align: center;
   }
-  .btn_all {
-    margin: 15px auto;
-    &:active {
-      background-color: #f6a362!important;
-    }
-  }
 
   p {
     color: rgba(0, 0, 0, 0.76);
     text-align: left;
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 14px;
     margin: 0 18px;
     padding-top: 10px;
   }
