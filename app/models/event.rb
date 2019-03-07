@@ -8,6 +8,7 @@ class Event < ApplicationRecord
   validates :date, :time, :place, :nb_person, presence: true
   belongs_to :bar, optional: true
 
+  before_validation :remove_bar_when_home
 
   def place_to
     if place == "Bar"
@@ -59,5 +60,9 @@ class Event < ApplicationRecord
     invitation_emails.each do |email|
       puts "j'invite #{email}"
     end
+  end
+
+  def remove_bar_when_home
+    self.bar = nil if place == "Chez moi"
   end
 end
