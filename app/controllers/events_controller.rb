@@ -5,16 +5,20 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @participant = @event.participants.where(user: current_user).first
 
+    ap @event
+    ap @event.creator
 
     @markers = [{
       lng: @event.coordinates[:longitude],
       lat: @event.coordinates[:latitude],
       image_url: helpers.asset_url('https://i.imgur.com/BsUZoRX.png')
     }]
+
+    ap @markers
   end
 
   def new
-    @event = Event.new
+    @event = Event.new(date: Date.today, time: '19:00')
     @bars = Bar.all
 
   end
