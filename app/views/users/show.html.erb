@@ -33,11 +33,10 @@
       </div>
     </div>
 
-
-
+    <hr>
       <div class="games">
       <h3>Ma bibliothèque de jeux</h3>
-        <div class="ml scroller">
+        <div class="biblio">
           <% @user.games.order(name: :asc).each do |game| %>
           <div class="game_biblio">
             <p><%= game.name %></p>
@@ -52,7 +51,7 @@
   <div class="cont-add-game">
     <%= simple_form_for @library do |f| %>
       <%= f.input :game_id, collection: Game.order(:name), input_html: { class: 'choices' }, label: false, html: { class: 'form-inline' }%>
-      <%= f.submit "+", class: "btn_plus", html: { class: 'form-inline' } %>
+      <%= f.submit "+", class: "btn_all_purple", html: { class: 'form-inline' } %>
     <% end %>
   </div>
   </div>
