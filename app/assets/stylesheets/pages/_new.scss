@@ -222,7 +222,19 @@ color: hsl(9, 40%, 60%);
 // ::placeholder {
 //     color: white !important;}
 
-#event-btn{
+input[type=date], input[type=time] {
+  -webkit-appearance: none;
+  display:block;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input.flatpickr-mobile {
+  display: flex;
+  align-items: center;
+}
+
+#event-btn, .flatpickr-mobile {
   color: white;
   border-radius: 10px;
   border: 1px solid white;

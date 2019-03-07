@@ -15,9 +15,8 @@ import "choices.js/public/assets/styles/choices.css";
 
 
 initMapbox();
-flatpickr('.date-calendar', {disableMobile: true, locale: French, dateFormat: "d-m-Y",});
+flatpickr('.date-calendar', {locale: French, dateFormat: "d-m-Y"});
 flatpickr('.time-calendar', {
-    disableMobile: true,
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",
