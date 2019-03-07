@@ -34,3 +34,33 @@
     color: #252A31;
   }
 }
+
+
+.btn_all_purple {
+  background: linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+  color: white;
+  margin: 20px auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 1px 4px 10px rgba(21, 35, 56, 0.26);
+  border-radius: 50px;
+  width: 229px;
+  height: 56px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.1s;
+  position: relative;
+  &:active {
+    color: #91354c;
+    background: white;
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

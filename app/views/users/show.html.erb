@@ -1,10 +1,10 @@
 <div class="profile_body">
   <div class="cont-link">
-    <%= link_to games_search_path do %>
+    <%= link_to root_path do %>
       <%= image_tag 'left-arrow.png', class: "left-arrow" %>
     <% end %>
     <h1 class="title_sign_up">Mon profil</h1>
-   <%= link_to destroy_user_session_path, method: :delete do %>
+   <%= link_to destroy_user_session_path, :class => "log_out_link", method: :delete do %>
     <i class="fas fa-sign-out-alt" id="logout"></i>
   <% end %>
   </div>
@@ -33,11 +33,10 @@
       </div>
     </div>
 
-
-
+    <hr>
       <div class="games">
       <h3>Ma bibliothèque de jeux</h3>
-        <div class="ml scroller">
+        <div class="biblio">
           <% @user.games.order(name: :asc).each do |game| %>
           <div class="game_biblio">
             <p><%= game.name %></p>
@@ -52,33 +51,12 @@
   <div class="cont-add-game">
     <%= simple_form_for @library do |f| %>
       <%= f.input :game_id, collection: Game.order(:name), input_html: { class: 'choices' }, label: false, html: { class: 'form-inline' }%>
-      <%= f.submit "+", class: "btn_plus", html: { class: 'form-inline' } %>
+<!--      <div class="btn_all_purple"> <%= f.submit '<i class="fas fa-plus"></i>'.html_safe%></div>
     <% end %>
-  </div>
+  </div> -->
+  <%= button_tag(type: 'submit', class: "btn_all_purple") do %>
+      <i class="fas fa-plus"></i>
+    <% end %>
   </div>
 
 </div>
-
-   <!--  <div class="container">
-      <hr>
-      <h3>Mes soirées</h3>
-      <div class="ml scroller">
-        <% @user.creator_events.order(date: :desc).each do |event| %>
-          <p>
-            <%#= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
-          </p>
-        <% end %>
-      </div>
-
-      <hr>
-
-      <h3>Mes invitations</h3>
-      <div class="ml scroller">
-        <% @user.attendee_events.each do |event| %>
-          <p>
-            <%#= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
-          </p>
-        <% end %>
-      </div>
-
-      <hr> -->

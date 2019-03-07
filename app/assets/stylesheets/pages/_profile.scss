@@ -1,15 +1,33 @@
 .profile_body {
   background: linear-gradient(326.86deg, #FFFFFF -11.31%, rgba(247, 241, 241, 0.88) 75.2%);
   text-align : center;
-  min-height : 1000px;
+  min-height: fit-content;
+  margin-bottom: 60px;
   margin-right: auto;
   margin-left: auto;
-  height: fit-content;
-  margin-bottom: 0px;
+
+
+  .cont-link {
+    position: relative;
+  }
+
+  .log_out_link {
+    padding-top: 10px;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+  }
 
   .user_card #avatar_profile {
     margin-top: 10px;
     border: 1px solid #0000005c;
+  }
+
+
+  .biblio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .name, .address, .email, .phone {
@@ -25,12 +43,7 @@
     width: 100%;
   }
 
-  .fas {
-    background: -webkit-linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-  }
+
 
   .game-stickers {
     grid-template-columns: 30px auto;
@@ -102,6 +115,40 @@
     color: rgba(0, 0, 0, 0.7);
     font-size: 20px;
   }
+
+  .form-control-label {
+    background-color: yellow;
+  }
+
+
+  .simple_form.new_library {
+    background-color: transparent!important;
+  }
+
+  .btn_all_purple {
+    border: 0.25px solid #C9CCD1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fas {
+      color: white!important;
+    }
+  }
+
+  .cont-link {
+    .fas {
+      background: -webkit-linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 1;
+    }
+  }
 }
 
 .form-group.select.optional.library_game_id {
@@ -109,12 +156,6 @@
   margin-left: 20px;
 }
 
-.btn-plus {
-  background: yellow;
-  border: 0.25px solid #C9CCD1;
-  box-shadow: 0px 24px 32px rgba(21, 35, 56, 0.26);
-  border-radius: 50%;
-}
 
 .user_card {
   margin-top: 5%;
@@ -132,6 +173,13 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+
+    .fas {
+      background: -webkit-linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 1;
+    }
 
     .name {
       margin-top: 15px;
@@ -164,7 +212,7 @@
   background-color: white;
   text-align: left;
   width: fit-content;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   margin: 5px;
   box-shadow: 0px 4px 10px rgba(21, 35, 56, 0.15);
