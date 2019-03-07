@@ -22,15 +22,6 @@
   picture: image/upload/v1551722348/eeobwsuzo5sy6bxwv9ew.jpg
   category: Stratégie
   nb_player_max: 4
-- name: Dixit Odyssey
-  nb_player_min: 3
-  duration: medium
-  rules:
-  description: |
-    Dixit Odyssey est un jeu extraordinaire qui vous emmènera plus loin que vous ne l'auriez imaginé, dans un monde onirique peuplé de petits êtres étranges. Il s'agit bien d'un jeu indépendant. Dixit Odyssey contient tout le matériel nécessaire pour jouer, dont un nouveau plateau pliable et 84 nouvelles cartes aux illustrations toujours aussi surprenantes.Plongez dans la magie de Dixit Odyssey... qui vous propose maintenant de jouer jusqu'à 12 joueurs ! Les tablettes de vote ont été revues pour être plus ergonomiques, le plateau de jeu est dépliable pour accueillir tous les joueurs, de nouvelles variantes de règles font leur apparition dont le jeu en équipes, et, petit plus, la boite est suffisamment bien pensée pour accueillir les cartes du Dixit Original et de sa première extension Dixit 2, et enfin les petits lapins servant de compteurs de points de victoire sont maintenant plus stables sur leurs pattes.Votre imagination parviendra-t-elle à toucher la sensibilité des gens vous entourant ?
-  picture: image/upload/v1551722351/ambxdhe1tvlsdmsfbc1z.jpg
-  category: Stratégie
-  nb_player_max: 12
 - name: La Salsa des Oeufs
   nb_player_min: 2
   duration: fast
@@ -60,10 +51,7 @@
   nb_player_min: 2
   duration: fast
   rules:
-  description: |2
-
-
-    Très bien
+  description:
   picture: image/upload/v1551722477/kwk3hpt2tlc58duezri3.jpg
   category: Junior
   nb_player_max: 6
@@ -121,15 +109,6 @@
   picture: image/upload/v1551722360/grlj4loibrw6j4ysmyk6.jpg
   category: Stratégie
   nb_player_max: 5
-- name: Dixit
-  nb_player_min: 3
-  duration: medium
-  rules:
-  description: |
-    En adaptant le jeu du dictionnaire, l'auteur de Dixit et l'illustratrice ont créé un jeu magique aussi plaisant en famille qu'entre amis. Votre imagination et celle de vos adversaires seront la base du jeu et vous vivrez un moment unique.A partir des illustrations de Marie Cardouat, la magie de Dixit opère très vite. De ces quelques images on obtient, en ajoutant sa personnalité et son univers, la phrase qui lancera le jeu. Que vous évoque un lapin en armure qui se tient, épée levée, devant trois portes? La réponse sera différente pour chaque personne et c'est ce qui fait le charme de Dixit.Le jeu Dixit fait appel à votre imagination, à votre interprétation et à votre univers personnel. Confrontez votre vision des cartes avec celles de vos amis, et découvrez vous les uns les autres. Dans ce jeu familial, rêve, imagination, poésie, et références culturelles aboutissent à un mélange d'exception.Cette phrase peut-être de différentes formes, inventée de toutes pièces, ou empruntée à une oeuvre existante. La seule limite est l'imagination.Ensuite les autres joueurs observent leurs propres cartes, en désignent une et la remètent au conteur. Ce dernier mélangera alors les cartes obtenues avec la carte qu'il a retenu auparavant. Puis il dévoilera l'ensemble des cartes.Les joueurs votent alors secrètement pour la carte qu'ils pensent être celle du conteur. Mais son rôle est ardu. Il doit à la fois mettre les joueurs sur la voie, sans pour autant que la carte choisie saute aux yeux de tous.Votre imagination parviendra-t-elle à toucher la sensibilité des gens vous entourant?
-  picture: image/upload/v1551722364/nsx2zhf1pkunff0vu7pz.jpg
-  category: Stratégie
-  nb_player_max: 6
 - name: Abalone
   nb_player_min: 2
   duration: medium
@@ -138,7 +117,7 @@
     Grand classique du jeu abstrait pour deux, Abalone vous invite à tenter d’éjecter d’un plateau hexagonal les six billes de votre adversaire en les poussant avec les vôtres.Simple, facile d'accès mais avec une profondeur de jeu immense, Abalone est un jeu de capture et d’affrontement au succès planétaire qui fait depuis plusieurs années l’objet de tournois et de concours officiels.Abalone a été élu As d’Or – Jeu de la Décennie au Festival International des Jeux de Cannes.Sur son plateau hexagonal, Abalone met en scène 14 billes noires face à 14 billes blanches. Les joueurs peuvent effectuer une seule action (ou mouvement) par tour.À votre tour, vous pourrez ainsi déplacer de une à trois boules devotre camp vers un ou plusieurs espaces libres situés dans une mêmedirection ou effectuer un « Sumito », mouvement consistant à pousserles billes adverses lorsque vous vous trouvez en position desupériorité numérique.Calculez bien vos coups, car tout mouvementeffectué ne pourra être modifié. 
   picture: image/upload/v1551722367/o7gw6duvej0eccflck2o.jpg
   category: Stratégie
-  nb_player_max: 0
+  nb_player_max: 2
 - name: Codenames XXL
   nb_player_min: 2
   duration: fast
@@ -174,15 +153,6 @@
   picture: image/upload/v1551722490/essxzxufgobeuwarz6pr.jpg
   category: Junior
   nb_player_max: 5
-- name: 'Pickomino : La Totale !'
-  nb_player_min: 2
-  duration: fast
-  rules:
-  description: |
-    Revivez la flamme de Pickomino avec son extension délirante !Lancez les 8 dés spéciaux pour récupérer les meilleurs pickominos ou les voler à vos adversaires. Grâce à cette version enrichie, vous tirerez encore plus de vers des dés. Mais attention, avec l’extension de nouveaux pickominos et des personnages s’en mêlent : la mère poule protège vos pickominos, la belette permet de relancer les dés... Sans compter, le ver en boîte, le corbeau ou même le dé en or ! Qui collectera le plus de vers ?Pickomino est un jeu d'ambiance, un jeu de dés pour les flambeurs qui aiment prendre des risques ou font preuve d'audace. Avec ce petit jeu aussi agréable qu'amusant, vous pourrez réunir la famille. Grâce à des règles simples, ce petit jeu se joue facilement et les parties sont rapides. Idéal pour les vacances en famille ou pourquoi pas à l'apéro entre amis.
-  picture: image/upload/v1551722375/jednepyrbc3itoy1o7j2.jpg
-  category: Ambiance
-  nb_player_max: 7
 - name: Timeline Inventions
   nb_player_min: 2
   duration: fast
@@ -275,25 +245,6 @@
   picture: image/upload/v1551722498/qdcvwtjcjxwlornjftqb.jpg
   category: Junior
   nb_player_max: 7
-- name: Pickomino
-  nb_player_min: 2
-  duration: medium
-  rules:
-  description: "Dans la basse cour, c'est la chasse aux vers ! Mais attention il va
-    falloir prendre des risques.Pickomino est un jeu d'ambiance, un jeu de dés pour
-    les flambeurs qui aiment prendre des risques ou font preuve d'audace. Avec ce
-    petit jeu aussi agréable qu'amusant, vous pourrez réunir la famille. Lancez les
-    8 dés originaux, choisissez une valeur de dés à mettre de côté, puis faites le
-    pari de relancer ou pas. Vous pouvez relancer les dés restant autant de fois que
-    vous le souhaitez, à condition de toujours pouvoir retenir une valeur de dés différente.
-    Si vous êtes dans l'incapacité de le faire alors vous devrez rendre un de vos
-    précieux Pickomino et passer votre tour ! Lorsque votre tour est fini, faites
-    l’addition pour savoir quel Pickomino prendre au centre de la table ou même dans
-    la main de vos adversaires !Allez-vous jouer la sécurité et récupérer un Pickomino
-    de faible valeur ou êtes-vous un flambeur ?"
-  picture: image/upload/v1551722577/fdqpntwgkwlfckuxpapg.jpg
-  category: Ambiance
-  nb_player_max: 7
 - name: Les Loups Garous de Thiercelieux
   nb_player_min: 8
   duration: medium
@@ -329,16 +280,6 @@
   picture: image/upload/v1551722579/gryowdmpf6cvlckbsvzz.jpg
   category: Ambiance
   nb_player_max: 18
-- name: Citadelles (4ème Éd.)
-  nb_player_min: 2
-  duration: medium
-  rules:
-  description: |
-    Citadelles est un jeu de stratégie qui se déroule dans un monde médiéval fantastique. Vous devez construire la plus grande et la plus belle ville du monde, avec différentes cartes qui représentent les quartiers: Université, Château, Cathédrale etc.Pour réaliser cela, vous serez tour à tour l'un des plus puissants personnages de la ville, le Roi, l'Evèques, le Marchand etc. Mais il n'est pas facile de construire une Citadelles prospère et unique: cela nécessite richesses, ambition et filouterie.Les parties sont toutes différentes et il vous faudra user de tactique et de ruse pour parvenir au succès en évitant le coups tordus des autres joueurs (vol, assassinat).Chaque joueur développe une cité pour la rendre la plus riche et la plus prestigieuse. Vous construisez des quartiers à l'aide de cartes que vous exposez devant vous. A chaque tour, les joueurs doivent incarner un personnage doté d'un pouvoir particulier : construire plus vite, détruire un quartier, assassiner, voler, remplir son trésor, protéger sa cité, piocher plus de cartes .Pourrez-vous deviner quels sont les personnages choisis par les autres joueurs ? Serez-vous victime de l'assassin ou du voleur ? A moins que vous ne soyez vous-même l'assassin ou le voleur!Rebondissements, coups tordus et ruses sont les points forts de Citadelles. Les règles sont simples et accessibles et on se plonge volontiers dans l'ambiance médiévale parfaitement illustrée sur des cartes de grande qualité.Cette 4ème édition du célèbre jeu Citadelles contient les personnages et les quartiers du jeu originel et de son extension, La Cité Sombre, ainsi que 9 nouveaux personnages et 12 quartiers inédits, offrant plus de variété que jamais !27 cartes Personnage - 84 cartes Quartier - 27 jetons Personnage - 5 jetons - 1 Couronne en Plastique - 6 cartes d’aide de jeu - 30 Pièces d’Or en plastique - 1 livret de RèglesLes cartes Personnage sont de dimension : 70 x 120mm / Les cartes Quartier sont de dimension : 57,5 x 89 mm
-
-  picture: image/upload/v1551722395/pmw6wiu7jgaeg4b5fqge.jpg
-  category: Ambiance
-  nb_player_max: 8
 - name: 'Unlock! 2 : Mystery Adventures'
   nb_player_min: 2
   duration: long
@@ -384,28 +325,6 @@
     \ \r\n\r\nEntre rires, absurdités et associations d'idées ridicules, le jeu de
     société Time's Up est devenu un classique. "
   picture: image/upload/v1551722402/svpcaowqyawkkgrkseh9.jpg
-  category: Ambiance
-  nb_player_max: 12
-- name: Time's Up Family - Orange
-  nb_player_min: 4
-  duration: medium
-  rules:
-  description: "\r\nEn quelques années Time's Up est devenu un incontournable du jeu
-    d'ambiance. \r\n\r\nDans le jeu Time's Up Family, les joueurs sont répartis en
-    équipes et la partie se joue en 3 manches. Durant chaque manche, chaque équipe
-    joue à tour de rôle et doit deviner un maximum de mots du paquet de 30 cartes
-    sélectionnées pour la partie. \r\n\r\nChaque manche est différente. Durant la
-    1ère manche, les équipes peuvent parler librement pour deviner les mots. Lors
-    de la deuxième manche, on reprend toujours le même paquet de 30 cartes (30 mots)
-    mais le joueur de l'équipe qui doit faire deviner ne peut prononcer qu'un seul
-    mot. Enfin dans la troisième manche, il s'agit cette fois de deviner le mot en
-    le mimant. \r\n\r\nContrairement aux jeux dits \"de culture\", Time's Up n'exige
-    pas de savoir encyclopédique pour s'amuser. En étant astucieux et avec un peu
-    de mémoire, tout le monde peut jouer et deviner les mots. \r\n\r\nLa particularité
-    de la version Family est que les mots à deviner sont ici des objets, des métiers
-    ou des animaux. Accessible dès 8 ans, vous pouvez ainsi jouer en famille à Time's
-    Up !"
-  picture: image/upload/v1551722406/e74vv1io3hdyeabcxrdg.jpg
   category: Ambiance
   nb_player_max: 12
 - name: Contrario
@@ -512,28 +431,6 @@
   picture: image/upload/v1551722586/tc4jdfby1etvxhxrazss.jpg
   category: Ambiance
   nb_player_max: 6
-- name: Time's Up Family - Vert
-  nb_player_min: 4
-  duration: medium
-  rules:
-  description: "\r\nEn quelques années Time's Up est devenu un incontournable du jeu
-    d'ambiance. \r\n\r\nDans le jeu Time's Up Family, les joueurs sont répartis en
-    équipes et la partie se joue en 3 manches. Durant chaque manche, chaque équipe
-    joue à tour de rôle et doit deviner un maximum de mots du paquet de 30 cartes
-    sélectionnées pour la partie. \r\n\r\nChaque manche est différente. Durant la
-    1ère manche, les équipes peuvent parler librement pour deviner les mots. Lors
-    de la deuxième manche, on reprend toujours le même paquet de 30 cartes (30 mots)
-    mais le joueur de l'équipe qui doit faire deviner ne peut prononcer qu'un seul
-    mot. Enfin dans la troisième manche, il s'agit cette fois de deviner le mot en
-    le mimant. \r\n\r\nContrairement aux jeux dits \"de culture\", Time's Up n'exige
-    pas de savoir encyclopédique pour s'amuser. En étant astucieux et avec un peu
-    de mémoire, tout le monde peut jouer et deviner les mots. \r\n\r\nLa particularité
-    de la version Family est que les mots à deviner sont ici des objets, des métiers
-    ou des animaux. Accessible dès 8 ans, vous pouvez ainsi jouer en famille à Time's
-    Up !"
-  picture: image/upload/v1551722419/csqk1flmikpasaoy4ag5.jpg
-  category: Ambiance
-  nb_player_max: 12
 - name: Codenames
   nb_player_min: 2
   duration: fast
@@ -644,16 +541,6 @@
   picture: image/upload/v1551722278/ucmt0db0yaqcarb0ydyb.jpg
   category: Stratégie
   nb_player_max: 4
-- name: Codenames XXL
-  nb_player_min: 2
-  duration: fast
-  rules:
-  description: |
-    Cette version de Codenames vous propose des cartes 2 fois plus grandes pour avoir une vision encore plus claires de tous les mots Code.Dans le jeu Codenames XXL, vous incarnez soit un maître-espion, soit un agent en mission. Pour retrouver sous quel nom de code se cachent vos informateurs, écoutez bien les indices donnés par les deux Maître-Espions et prenez garde à ne pas contacter un informateur ennemi, ou pire... le redoutable assassin Codenames XXL est un jeu d'associations d'idées fin et original. Les deux Maître-Espions connaissent l'identité des 25 informateurs sur la table mais leurs agents, eux, ne voient que leur Nom de Code.Les équipes rivalisent d'ingéniosité pour être les premiers à prendre contact avec tous les informateurs. Pour cela, les Maître-Espions donnent un seul mot d'indice pouvant désiger plusieurs Noms de Code sur la table.Leurs agents essayent, dès lors, de deviner les Noms de Code de leur couleur et d'éviter ceux de l'autre équipe. Et surtout, il faut absolument éviter l'Assassin. La première équipe qui identifie tous ses informateurs gagne la partie.
-
-  picture: image/upload/v1551722282/qltz8dshzl6hzaf4cpob.jpg
-  category: Stratégie
-  nb_player_max: 8
 - name: Manhattan
   nb_player_min: 2
   duration: medium
@@ -737,7 +624,7 @@
     propres faiblesses.Rassemblez vos vaisseaux ! Et que la Force soit avec vous..!'
   picture: image/upload/v1551722288/idczmki0pdidantvzgdp.jpg
   category: Stratégie
-  nb_player_max: 0
+  nb_player_max: 2
 - name: DownForce
   nb_player_min: 2
   duration: medium
@@ -974,7 +861,7 @@
     tactique !"
   picture: image/upload/v1551722319/hduvcrxozvosbkgngkfp.jpg
   category: Stratégie
-  nb_player_max: 0
+  nb_player_max: 2
 - name: 'Timeline : Sciences et Explorations'
   nb_player_min: 2
   duration: fast
@@ -1004,25 +891,6 @@
     de référence, vous demandant d'être de plus en plus précis."
   picture: image/upload/v1551722451/cxtyskpzddsb5gomfdup.jpg
   category: Ambiance
-  nb_player_max: 8
-- name: Codenames
-  nb_player_min: 2
-  duration: fast
-  rules:
-  description: "\r\nDans le jeu Codenames, vous incarnez soit un maître-espion, soit
-    un agent en mission. Pour retrouver sous quel nom de code se cachent vos informateurs,
-    écoutez bien les indices donnés par les deux Maître-Espions et prenez garde à
-    ne pas contacter un informateur ennemi, ou pire... le redoutable assassin \r\n\r\nCodenames
-    est un jeu d'associations d'idées fin et original. Les deux Maître-Espions connaissent
-    l'identité des 25 informateurs sur la table mais leurs agents, eux, ne voient
-    que leur Nom de Code.\r\n\r\nLes équipes rivalisent d'ingéniosité pour être les
-    premiers à prendre contact avec tous les informateurs. Pour cela, les Maître-Espions
-    donnent un seul mot d'indice pouvant désiger plusieurs Noms de Code sur la table.\r\n\r\nLeurs
-    agents essayent, dès lors, de deviner les Noms de Code de leur couleur et d'éviter
-    ceux de l'autre équipe. Et surtout, il faut absolument éviter l'Assassin. La première
-    équipe qui identifie tous ses informateurs gagne la partie."
-  picture: image/upload/v1551722323/j7momdor8owswuayesla.jpg
-  category: Stratégie
   nb_player_max: 8
 - name: Chromino Deluxe
   nb_player_min: 1
@@ -1241,15 +1109,6 @@
   picture: image/upload/v1551722493/pdtr6atfxj7vjooc69qm.png
   category: Junior
   nb_player_max: 6
-- name: Dixit
-  nb_player_min: 3
-  duration: medium
-  rules:
-  description: |
-    En adaptant le jeu du dictionnaire, l'auteur de Dixit et l'illustratrice ont créé un jeu magique aussi plaisant en famille qu'entre amis. Votre imagination et celle de vos adversaires seront la base du jeu et vous vivrez un moment unique.A partir des illustrations de Marie Cardouat, la magie de Dixit opère très vite. De ces quelques images on obtient, en ajoutant sa personnalité et son univers, la phrase qui lancera le jeu. Que vous évoque un lapin en armure qui se tient, épée levée, devant trois portes? La réponse sera différente pour chaque personne et c'est ce qui fait le charme de Dixit.Le jeu Dixit fait appel à votre imagination, à votre interprétation et à votre univers personnel. Confrontez votre vision des cartes avec celles de vos amis, et découvrez vous les uns les autres. Dans ce jeu familial, rêve, imagination, poésie, et références culturelles aboutissent à un mélange d'exception.Cette phrase peut-être de différentes formes, inventée de toutes pièces, ou empruntée à une oeuvre existante. La seule limite est l'imagination.Ensuite les autres joueurs observent leurs propres cartes, en désignent une et la remètent au conteur. Ce dernier mélangera alors les cartes obtenues avec la carte qu'il a retenu auparavant. Puis il dévoilera l'ensemble des cartes.Les joueurs votent alors secrètement pour la carte qu'ils pensent être celle du conteur. Mais son rôle est ardu. Il doit à la fois mettre les joueurs sur la voie, sans pour autant que la carte choisie saute aux yeux de tous.Votre imagination parviendra-t-elle à toucher la sensibilité des gens vous entourant?
-  picture: image/upload/v1551722496/mv1tbjax8j9axcbwxsek.jpg
-  category: Junior
-  nb_player_max: 6
 - name: Pandemic (Pandémie)
   nb_player_min: 2
   duration: medium
@@ -1356,29 +1215,6 @@
   picture: image/upload/v1551722516/rpmywcylqzncy3256wfb.jpg
   category: Stratégie
   nb_player_max: 8
-- name: Ricochet Robots
-  nb_player_min: 2
-  duration: medium
-  rules:
-  description: "\r\nAidez les robots à atteindre leur destination sur le plateau !
-    Concentration, réflexion, mémorisation ! Un jeu qui vous stimule les neurones.
-    \r\n\r\nRicochet Robots est un jeu de déduction et de logique captivant. Avec
-    des mécanismes simples, la réflexion est pourtant intense. Ce jeu de plateau est
-    donc réservé à des joueurs appréciant les parties aux exercices intellectuels
-    poussés et nécessitant une bonne concentration. \r\n\r\nEn outre, Ricochets Robots
-    présente l'originalité de se jouer à autant de joueurs que l'on souhaite pourvu
-    que chacun puisse trouver la place autour du plateau. \r\n\r\nA chaque tour un
-    jeton représentant un objectif sur le plateau est tiré au sort. Chaque joueurs
-    simultanément doit alors trouver le chemin le plus court entre un robot désigné
-    et cet objectif. Les robots se déplacent en ligne droite. Sur le plateau, des
-    obstacles sur lesquels les robots peuvent ticochets complexifient la tâche des
-    joueurs dans leur recherche du plus court chemin. Le joueur qui annonce le premier
-    le chemin le plus court remporte le jeton. \r\n\r\nRicochet Robots est un jeu
-    très prenant, qui génère une tension stimulante et de grands moments ludiques.
-    "
-  picture: image/upload/v1551722519/gh2gnq2easuvs6jybtpa.jpg
-  category: Stratégie
-  nb_player_max: 80
 - name: Les Aventuriers du Rail - Europe
   nb_player_min: 2
   duration: long
@@ -1490,30 +1326,6 @@
   picture: image/upload/v1551722547/mg03uvpwiyxnmbm5dghz.jpg
   category: Stratégie
   nb_player_max: 4
-- name: 6 Qui Prend !
-  nb_player_min: 2
-  duration: medium
-  rules:
-  description: "\r\n104 cartes numérotées représentant des « têtes de bœufs ». Saurez-vous
-    vous débarrasser de vos cartes sans récolter ces maudites bêtes à cornes ?   \r\n\r\n6
-    Qui Prend ! est un jeu de cartes aux règles simples dont les parties sont rapides
-    et s’enchainent avec plaisir. Ce petit jeu s’adresse à tous. Accessible et léger,
-    il se révèle délirant et parfois hasardeux si vous êtes nombreux et devient très
-    tactique à moins de 5 joueurs avec des joueurs habitués et expérimentés.   \r\n\r\nPrésenté
-    dans une petite boite en métal rouge,  6 Qui Prend ! peut s’emmener partout et
-    s’explique en 1 minute chrono : l’idéal pour démarrer une partie n’importe où,
-    même avec des débutants.   \r\n\r\nA chaque tour, vous choisissez une carte numérotée
-    parmi votre jeu pour tenter de la placer dans une des 4 suites posées devant les
-    joueurs. Tout le monde révèle la carte choisie en même temps. On place alors les
-    cartes dans la suite qui peut l’accueillir selon l’ordre et certaines conditions.
-    Mais attention ! Si votre carte se retrouve en 6e position d’une suite, vous devez
-    récupérer cette suite … et les têtes de bœufs représentées sur les cartes viennent
-    s’accumuler dans votre troupeau … Une nouvelle suite démarre alors.   \r\n\r\nUne
-    fois les 10 cartes de chaque joueur placées, celui qui possède le plus petit troupeau
-    gagne la partie."
-  picture: image/upload/v1551722537/eibxu7bf9oqieos1knif.jpg
-  category: Stratégie
-  nb_player_max: 10
 - name: Carcassonne
   nb_player_min: 2
   duration: medium
