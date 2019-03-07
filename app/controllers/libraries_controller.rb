@@ -9,9 +9,8 @@ class LibrariesController < ApplicationController
     @library = Library.new(library_params)
     @user = current_user
     @library.user = @user
-
-    if @library.save!
-      redirect_to user_path(@user)
+    if @library.save
+      redirect_to user_path(@user, anchor:"new_library")
     else
       render 'users/show'
     end

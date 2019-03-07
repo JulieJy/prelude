@@ -54,4 +54,13 @@
   text-align: center;
   transition: all 0.1s;
   position: relative;
+  &:active {
+    color: #91354c;
+    background: white;
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }

@@ -2,7 +2,7 @@
   background: linear-gradient(326.86deg, #FFFFFF -11.31%, rgba(247, 241, 241, 0.88) 75.2%);
   text-align : center;
   min-height: fit-content;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   margin-right: auto;
   margin-left: auto;
 
@@ -43,12 +43,7 @@
     width: 100%;
   }
 
-  .fas {
-    background: -webkit-linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-  }
+
 
   .game-stickers {
     grid-template-columns: 30px auto;
@@ -120,13 +115,39 @@
     color: rgba(0, 0, 0, 0.7);
     font-size: 20px;
   }
+
+  .form-control-label {
+    background-color: yellow;
+  }
+
+
+  .simple_form.new_library {
+    background-color: transparent!important;
+  }
+
   .btn_all_purple {
     border: 0.25px solid #C9CCD1;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fas {
+      color: white!important;
+    }
+  }
+
+  .cont-link {
+    .fas {
+      background: -webkit-linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 1;
+    }
   }
 }
 
@@ -152,6 +173,13 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+
+    .fas {
+      background: -webkit-linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 1;
+    }
 
     .name {
       margin-top: 15px;
