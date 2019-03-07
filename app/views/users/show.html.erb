@@ -4,7 +4,7 @@
       <%= image_tag 'left-arrow.png', class: "left-arrow" %>
     <% end %>
     <h1 class="title_sign_up">Mon profil</h1>
-   <%= link_to destroy_user_session_path, method: :delete do %>
+   <%= link_to destroy_user_session_path, :class => "log_out_link", method: :delete do %>
     <i class="fas fa-sign-out-alt" id="logout"></i>
   <% end %>
   </div>
@@ -58,27 +58,3 @@
   </div>
 
 </div>
-
-   <!--  <div class="container">
-      <hr>
-      <h3>Mes soirées</h3>
-      <div class="ml scroller">
-        <% @user.creator_events.order(date: :desc).each do |event| %>
-          <p>
-            <%#= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
-          </p>
-        <% end %>
-      </div>
-
-      <hr>
-
-      <h3>Mes invitations</h3>
-      <div class="ml scroller">
-        <% @user.attendee_events.each do |event| %>
-          <p>
-            <%#= link_to "Soirée de #{event.creator.first_name} | #{event.date} | #{event.creator.address}", event_path(event) %>
-          </p>
-        <% end %>
-      </div>
-
-      <hr> -->

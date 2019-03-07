@@ -7,6 +7,16 @@
   height: fit-content;
   margin-bottom: 0px;
 
+  .cont-link {
+    position: relative;
+  }
+
+  .log_out_link {
+    padding-top: 10px;
+    position: absolute;
+    right: 0;
+  }
+
   .user_card #avatar_profile {
     margin-top: 10px;
     border: 1px solid #0000005c;
