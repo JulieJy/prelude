@@ -8,6 +8,23 @@ class Event < ApplicationRecord
   validates :date, :time, :place, :nb_person, presence: true
   belongs_to :bar, optional: true
 
+
+  def place_to
+    if place == "Bar"
+      "#{bar.name}"
+    else
+      "Chez #{creator.first_name}"
+    end
+  end
+
+  def address
+    if place == "Bar"
+      "#{bar.name} - #{bar.address}"
+    else
+      creator.address
+    end
+  end
+
   def coordinates
     if bar
       {
