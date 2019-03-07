@@ -39,6 +39,7 @@ padding-top: 2px;
 color: hsl(9, 40%, 60%);
 }
 
+
 .mainLoginInput:-ms-input-placeholder  {
 font-family: FontAwesome;
 font-weight: normal;
@@ -72,6 +73,13 @@ color: hsl(9, 40%, 60%);
     font-size: 18px;
     letter-spacing: 0.01em;
     color: #F2F2F2;
+  }
+
+  #btnminus, #btnplus {
+    &:active {
+      color: #f05d59!important;
+      border: 1px solid white;
+    }
   }
 
   h3 {

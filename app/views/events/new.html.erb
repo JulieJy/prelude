@@ -39,6 +39,7 @@
               <%= f.input :bar_id, collection: Bar.all.map {|b| ["#{b.name}: #{b.address}", b.id]}, input_html:{id:"event-btn"}, :placeholder => 'Invitez', label: false, include_blank: false %>
             </div>
 
+
             <div class="cont-players">
               <h3>Avec qui ?</h3>
 

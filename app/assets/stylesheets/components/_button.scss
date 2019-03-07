@@ -17,7 +17,6 @@
   -moz-transition: all 0.1s;
   transition: all 0.1s;
   position: relative;
-
   &:active {
     background : #F05D59;
     color : white;
@@ -25,11 +24,9 @@
     -moz-transition: all 0.1s;
     transition: all 0.1s;
   }
-
   &:focus {
     outline: none;
   }
-
   a {
     color: #252A31;
   }

@@ -1,5 +1,6 @@
 <div class="home_body unauthenticated">
   <%= image_tag "prelude_negatif.png", alt: "prelude logo", class:"prelude_logo_logout" %>
-  <%= link_to t(".sign_up", default: "Inscription"), new_user_registration_path, id:"inscription_btn" %>
+  <p id="tagline">Détendez-vous, jouez.</p>
+  <%= link_to t(".sign_up", default: "Inscription"), new_user_registration_path, :class =>"btn_all", id:"inscription_btn" %>
   <%= link_to t(".sign_in", default: "Déjà membre? Je me connecte"), new_user_session_path, id:"sign_in" %>
 </div>
