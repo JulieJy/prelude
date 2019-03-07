@@ -11,9 +11,9 @@
 
 
       <div class="box-text">
-        <h3>Soirée Jeux de  <span> <%= @event.creator.first_name %></h3></span>
+        <h3>Soirée jeux de  <span> <%= @event.creator.first_name %></h3></span>
 
-        <div class="game-stickers"><i class="fas fa-clock"></i><p> <%= @event.date.strftime("%m/%d") %> <%= @event.time.strftime("à %I:%M%p") %></p></div>
+        <div class="game-stickers"><i class="fas fa-clock"></i><p><%= @event.date_format %> à <%= @event.time_format %></p></div>
         <div class="game-stickers"><i class="fas fa-map-marker-alt"></i><p><%= @event.address %></p></div>
         <div class="game-stickers"><i class="fas fa-users"></i><p><%= @event.nb_person %> participants</p></div>
       </div>
@@ -46,7 +46,7 @@
   <div class="row">
       <div class="col-sx-12 col-md-4 col-md-offset-4">
         <% if current_user == @event.creator %>
-          <button class="btn_all"><%= link_to t("demarrer", default: "Demarrer la soirée"), games_search_path%></button>
+          <button class="btn_all_purple"><%= link_to t("demarrer", default: "Démarrer la soirée"), games_search_path%></button>
         <% end %>
       </div>
     </div>

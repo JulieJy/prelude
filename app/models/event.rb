@@ -25,6 +25,14 @@ class Event < ApplicationRecord
     end
   end
 
+  def date_format
+    date.strftime("%d/%m/%Y")
+  end
+
+  def time_format
+    time.strftime("%k:%M")
+  end
+
   def coordinates
     if bar
       {
