@@ -12,7 +12,7 @@
       <% @my_event.each do |event| %>
         <div class="invit-box">
           <p>
-            <%= link_to "#{event.date} | #{event.place_to}", event_path(event) %>
+            <%= link_to "#{event.date_format} | #{event.place_to}", event_path(event) %>
           </p>
         </div>
       <% end %>
@@ -25,7 +25,7 @@
       <% @invitations.each do |event| %>
         <div class="invit-box">
         <p>
-          <%= link_to "#{event.creator.first_name} | #{event.date} | #{event.place_to}", event_path(event) %>
+          <%= link_to "#{event.creator.first_name} | #{event.date_format} | #{event.place_to}", event_path(event) %>
         </p>
         </div>
       <% end %>
