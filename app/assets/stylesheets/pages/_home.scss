@@ -3,6 +3,7 @@
 
 .home_body.unauthenticated {
   background: linear-gradient(159.68deg, #39193F 0%, #A23B4F 58.75%);
+  padding: 20% 0;
 }
 
 .home_body {
@@ -24,8 +25,6 @@
 
   #tagline {
     color: #ffffffd6;
-    position: absolute;
-    top: 48%;
     font-size: 22px;
   }
 
@@ -95,6 +94,15 @@
   }
 }
 
+.tagline_position {
+  flex-grow: 1;
+}
+
+.btn_home {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
 #user_name {
   font-family: Open Sans;
   padding-top: 5px;
@@ -111,19 +119,13 @@
 .prelude_logo_logout {
   height: 176px;
   width: 200px;
-  position: absolute;
-  top: 22%;
 }
 
 #inscription_btn {
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
-  width: 60%;
-  padding: 18px 15px;
-  margin-bottom: 5px;
-  position: absolute;
-  bottom: 20%;
+  padding: 18px 74px;
 
   font-family: Open Sans;
   text-transform: uppercase;
@@ -136,8 +138,6 @@
 }
 
 #sign_in {
-  position: absolute;
-  bottom: 15%;
   font-family: Open Sans;
   text-transform: uppercase;
   font-style: normal;
@@ -146,4 +146,13 @@
   text-decoration: none;
   color: white;
   letter-spacing: 0.75px;
+}
+
+.home-logo {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.link_login {
+
 }
