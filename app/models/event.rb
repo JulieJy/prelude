@@ -19,7 +19,7 @@ class Event < ApplicationRecord
   end
 
   def address
-    if place == "Bar"
+    if bar
       "#{bar.name} - #{bar.address}"
     else
       creator.address
