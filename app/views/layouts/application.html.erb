@@ -2,12 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-    <title>Prélude</title>
+    <meta name="description" content="Organisez facilement des soirées jeux entre amis et ne perdez plus de temps à choisir un jeu.">
+    <title>Prelude | Détendez-vous, jouez.</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+
+    <meta property="og:title" content="Prelude">
+    <meta property="og:url" content="http://www.prelude.fun">
+    <meta property="og:site_name" content="Prelude">
+    <meta property="og:description" content="Organisez facilement des soirées jeux entre amis et ne perdez plus de temps à choisir un jeu.">
+    <meta property="og:image" content="https://res.cloudinary.com/dx51mypmz/image/upload/v1552043938/prelude_meta.jpg">
     <%= favicon_link_tag asset_path('picto_logo_prelude.png') %>
 
     <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path 'icons/apple-icon-180x180.png' %>">
