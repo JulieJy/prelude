@@ -18,7 +18,7 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new(date: Date.today, time: '19:00')
+    @event = Event.new(date: Date.current, time: '19:00')
     @bars = Bar.all
 
   end
