@@ -766,16 +766,6 @@
   picture: image/upload/v1551722444/wkujap5jfabh6g92exto.jpg
   category: Ambiance
   nb_player_max: 12
-- name: Citadelles (4ème Éd.)
-  nb_player_min: 2
-  duration: medium
-  rules:
-  description: |
-    Citadelles est un jeu de stratégie qui se déroule dans un monde médiéval fantastique. Vous devez construire la plus grande et la plus belle ville du monde, avec différentes cartes qui représentent les quartiers: Université, Château, Cathédrale etc.Pour réaliser cela, vous serez tour à tour l'un des plus puissants personnages de la ville, le Roi, l'Evèques, le Marchand etc. Mais il n'est pas facile de construire une Citadelles prospère et unique: cela nécessite richesses, ambition et filouterie.Les parties sont toutes différentes et il vous faudra user de tactique et de ruse pour parvenir au succès en évitant le coups tordus des autres joueurs (vol, assassinat).Chaque joueur développe une cité pour la rendre la plus riche et la plus prestigieuse. Vous construisez des quartiers à l'aide de cartes que vous exposez devant vous. A chaque tour, les joueurs doivent incarner un personnage doté d'un pouvoir particulier : construire plus vite, détruire un quartier, assassiner, voler, remplir son trésor, protéger sa cité, piocher plus de cartes .Pourrez-vous deviner quels sont les personnages choisis par les autres joueurs ? Serez-vous victime de l'assassin ou du voleur ? A moins que vous ne soyez vous-même l'assassin ou le voleur!Rebondissements, coups tordus et ruses sont les points forts de Citadelles. Les règles sont simples et accessibles et on se plonge volontiers dans l'ambiance médiévale parfaitement illustrée sur des cartes de grande qualité.Cette 4ème édition du célèbre jeu Citadelles contient les personnages et les quartiers du jeu originel et de son extension, La Cité Sombre, ainsi que 9 nouveaux personnages et 12 quartiers inédits, offrant plus de variété que jamais !27 cartes Personnage - 84 cartes Quartier - 27 jetons Personnage - 5 jetons - 1 Couronne en Plastique - 6 cartes d’aide de jeu - 30 Pièces d’Or en plastique - 1 livret de RèglesLes cartes Personnage sont de dimension : 70 x 120mm / Les cartes Quartier sont de dimension : 57,5 x 89 mm
-
-  picture: image/upload/v1551722306/b0bslpc4ypl1uwdayhmv.jpg
-  category: Stratégie
-  nb_player_max: 8
 - name: Kingdomino
   nb_player_min: 2
   duration: fast
@@ -818,7 +808,7 @@
   picture: image/upload/v1551722312/fcb5oyhxeqzlxbh8dbrp.jpg
   category: Stratégie
   nb_player_max: 4
-- name: Citadelles - Édition Classique
+- name: Citadelles
   nb_player_min: 2
   duration: medium
   rules:
@@ -950,7 +940,7 @@
   picture: image/upload/v1551722453/crdkme6lv5qasb1s8p54.jpg
   category: Ambiance
   nb_player_max: 12
-- name: Colt Express (Édition Augmentée)
+- name: Colt Express
   nb_player_min: 2
   duration: medium
   rules:
@@ -967,7 +957,7 @@
     et vont ainsi vous handicaper.Avec son matériel de jeu en 3 dimensions, Colt Express
     est réellement immersif. Le plaisir se renouvele à chaque partie et vos aventures
     le long de ce train du far west seront palpitantes et pleine de rebondissements."
-  picture: image/upload/v1551722334/j7urrdjkpkraxzrsswvm.jpg
+  picture: image/upload/v1552035917/colt-express-edition-augmentee.jpg
   category: Stratégie
   nb_player_max: 6
 - name: Les Aventuriers du Rail - Edition 10 Ans
