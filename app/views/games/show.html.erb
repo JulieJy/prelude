@@ -6,8 +6,8 @@
        <div class="game-box">
 
         <div class="cont-link">
-          <%= link_to request.referrer do %>
-            <%=image_tag 'left-arrow.png', class: "left-arrow" %>
+          <%= link_to '#', onclick: 'history.back()' do %>
+            <%= image_tag 'left-arrow.png', class: "left-arrow" %>
           <% end %>
           <h1 class="title_sign_up">Détails du jeu</h1>
         </div>
