@@ -1,6 +1,14 @@
 <div class="home_body unauthenticated">
-  <%= image_tag "prelude_negatif.png", alt: "prelude logo", class:"prelude_logo_logout" %>
-  <p id="tagline">Détendez-vous, jouez.</p>
-  <%= link_to t(".sign_up", default: "Inscription"), new_user_registration_path, :class =>"btn_all", id:"inscription_btn" %>
-  <%= link_to t(".sign_in", default: "Déjà membre? Je me connecte"), new_user_session_path, id:"sign_in" %>
+  <div class="home_logo">
+    <%= image_tag "prelude_negatif.png", alt: "prelude logo", class:"prelude_logo_logout" %>
+  </div>
+  <div class="tagline_position">
+    <p id="tagline">Détendez-vous, jouez.</p>
+  </div>
+  <div class="btn_home">
+    <%= link_to t(".sign_up", default: "Inscription"), new_user_registration_path, class:"btn_all", id:"inscription_btn" %>
+  </div>
+  <div class="link_login">
+    <%= link_to t(".sign_in", default: "Déjà membre? Je me connecte"), new_user_session_path, id:"sign_in" %>
+  </div>
 </div>
