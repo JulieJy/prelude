@@ -6,7 +6,7 @@
        <div class="game-box">
 
         <div class="cont-link">
-          <%= link_to '#', onclick: 'history.back()' do %>
+          <%= link_to 'javascript:history.go(-1)' do %>
             <%= image_tag 'left-arrow.png', class: "left-arrow" %>
           <% end %>
           <h1 class="title_sign_up">Détails du jeu</h1>
